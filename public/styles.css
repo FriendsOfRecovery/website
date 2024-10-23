@@ -166,3 +166,93 @@ nav ul li a {
             width: 100%; /* Make images responsive */
             max-width: 300px; /* You can adjust the max-width as needed */
         }
+ 
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    height: 400px; /* You can adjust the height as needed */
+    overflow: hidden;
+}
+
+.hero-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures images cover the entire section */
+    max-width: 1200px; /* Enforce a reasonable max width */
+    max-height: 400px; /* Enforce a reasonable max height */
+}
+
+/* Navigation arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 100;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Dots/Indicators */
+.dots-container {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 10;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Animation for fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
