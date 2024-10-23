@@ -1,36 +1,19 @@
-name: Deploy to GitHub Pages
+name: Deploy static website
 
 on:
   push:
     branches:
-      - main  # Change this if you use another branch
+      - main  # or the branch you want to trigger the deploy
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout the latest code
       - name: Checkout code
-        uses: actions/checkout@v3  # This runs on Node.js 20 by default
+        uses: actions/checkout@v3
 
-      # Set up Node.js using the latest version (v4) for Node.js 20 compatibility
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'  # Explicitly use Node.js version 20
-
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Build the project (if applicable)
-      - name: Build the project
-        run: npm run build  # If you have a build step, otherwise remove this
-
-      # Deploy the static files from /public to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # Make sure the /public folder contains your static site files
+          publish_dir: ./public  # Path to your `/public` folder containing index.html, styles.css, and script.js
