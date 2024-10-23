@@ -3,7 +3,7 @@ name: Deploy static website
 on:
   push:
     branches:
-      - gh-pages # or the branch you want to trigger the deploy
+      - main # or the branch you want to trigger the deploy
 
 jobs:
   deploy:
