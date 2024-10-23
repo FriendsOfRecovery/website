@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js
+      # Set up Node.js to use Node.js 20
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'  # Set the version to Node.js 20
 
       # Install dependencies
       - name: Install dependencies
@@ -26,7 +26,7 @@ jobs:
 
       # Build the project (if applicable)
       - name: Build the project
-        run: npm run build # Skip if you don't have a build step, or just move static files here
+        run: npm run build # If you have a build step, otherwise remove this
 
       # Deploy the static files from /public to GitHub Pages
       - name: Deploy to GitHub Pages
