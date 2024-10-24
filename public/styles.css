@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Basic Reset */
 * {
     margin: 0;
@@ -14,16 +12,25 @@ body {
     margin: 0;
 }
 
+a {
+    color: #008DBB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005f80;
+}
+
 /* Container Class to Center Content */
 .container {
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;    /* Center the container */
-    padding: 0 20px;   /* Optional horizontal padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header and Footer */
 header, footer {
-    background-color: #5F07B3; /* Updated to new purple color */
+    background-color: #5F07B3; /* Purple color */
     color: white;
 }
 
@@ -42,15 +49,6 @@ header .container, footer .container {
     filter: drop-shadow(5px 5px 5px #222);
 }
 
-/* Main Section Styling */
-main {
-    /* Remove padding since .container handles it */
-}
-
-main section {
-    margin-bottom: 40px;
-}
-
 footer {
     text-align: center;
     padding: 20px;
@@ -63,7 +61,12 @@ footer p {
     margin: 5px 0;
 }
 
-/* Menu Styling */
+/* Main Section Styling */
+main section {
+    margin-bottom: 40px;
+}
+
+/* Navigation Menu Styling */
 nav {
     position: relative;
 }
@@ -81,7 +84,6 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration: none;
     display: block;
     padding: 10px;
     white-space: nowrap;
@@ -93,7 +95,6 @@ nav ul li a {
     cursor: pointer;
 }
 
-/* Mobile Menu Styles */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -103,11 +104,11 @@ nav ul li a {
 
     nav ul {
         flex-direction: column;
-        display: none; /* Hidden by default */
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: #5F07B3; /* Updated to new purple color */
+        background-color: #5F07B3;
         padding: 10px 0;
         min-width: 150px;
     }
@@ -133,34 +134,6 @@ nav ul li a {
     nav ul {
         display: flex;
     }
-}
-
-/* Add styles for the two-column layout */
-.about-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-/* Style for the main content */
-.about-content {
-    flex: 2;
-    padding-right: 20px;
-}
-
-/* Style for the image section */
-.about-images {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.about-images img {
-    width: 100%;
-    max-width: 300px;
 }
 
 /* Hero Section Styling */
@@ -192,10 +165,10 @@ nav ul li a {
 .slides img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Adjust as needed */
+    object-fit: contain;
 }
 
-/* Navigation arrows */
+/* Navigation Arrows */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -243,7 +216,7 @@ nav ul li a {
     background-color: #717171;
 }
 
-/* Animation for fade */
+/* Animation for Fade */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -254,15 +227,128 @@ nav ul li a {
     to { opacity: 1; }
 }
 
-/* Responsive adjustments for about page */
+/* General Headings */
+h1, h2, h3 {
+    color: #5F07B3;
+}
+
+/* Buttons */
+.button, .btn {
+    background-color: #008DBB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover, .btn:hover {
+    background-color: #005f80;
+}
+
+/* About Page Styling */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.about-content {
+    flex: 2;
+    min-width: 300px;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.about-content h1,
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-content p,
+.about-content ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-images {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.staff-member {
+    margin-bottom: 30px;
+}
+
+.staff-image {
+    width: 100%;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.bio-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggle-bio {
+    background-color: #008DBB;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-bio:hover {
+    background-color: #005f80;
+}
+
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
     }
 
     .about-content {
+        margin-right: 0;
         padding-right: 0;
     }
+
+    .staff-image {
+        margin: 0 auto 10px;
+    }
+}
+
+/* Mission Section Styling */
+#mission {
+    margin-top: 40px;
+}
+
+#mission h2 {
+    margin-bottom: 20px;
+}
+
+#mission p {
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 /* Locations Section Styling */
@@ -280,7 +366,7 @@ nav ul li a {
 }
 
 .office h3 {
-    color: #5F07B3; /* Updated to new purple color */
+    margin-bottom: 10px;
 }
 
 .office p {
@@ -297,46 +383,6 @@ nav ul li a {
     }
 }
 
-/* Mission Section Styling */
-#mission {
-    margin-top: 40px;
-}
-
-#mission h2 {
-    color: #5F07B3; /* Updated to new purple color */
-    margin-bottom: 20px;
-}
-
-#mission p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Additional Styling */
-h2, h3 {
-    color: #5F07B3; /* Updated headings to use purple color */
-}
-
-a {
-    color: #008DBB; /* Updated links to use blue color */
-}
-
-a:hover {
-    color: #005f80; /* Darker shade of blue on hover */
-}
-
-/* Button Styles (if any buttons are used) */
-.button, .btn {
-    background-color: #008DBB; /* Blue background */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover, .btn:hover {
-    background-color: #005f80; /* Darker blue on hover */
-}
 /* FAQ Section Styling */
 .faq-container {
     margin-top: 40px;
@@ -347,7 +393,6 @@ a:hover {
 }
 
 .faq-entry h3 {
-    color: #5F07B3; /* Use the purple color for headings */
     margin-bottom: 10px;
 }
 
@@ -357,11 +402,11 @@ a:hover {
 }
 
 .faq-entry a {
-    color: #008DBB; /* Blue color for links */
+    color: #008DBB;
 }
 
 .faq-entry a:hover {
-    color: #005f80; /* Darker blue on hover */
+    color: #005f80;
 }
 
 .faq-image {
@@ -374,17 +419,11 @@ a:hover {
 @media (max-width: 768px) {
     .faq-image {
         float: none;
-        display: block;
         margin: 0 auto 15px;
     }
 }
 
-/* Additional styles for the Q&A page */
-#qanda h1 {
-    color: #5F07B3;
-    margin-bottom: 20px;
-}
-/* Styles for resource list in FAQ Entry */
+/* Styles Specific to Q&A Page */
 .resource-list {
     list-style: none;
     margin: 0;
@@ -413,182 +452,26 @@ a:hover {
         align-items: center;
         text-align: center;
     }
+
     .resource-image {
         margin-bottom: 10px;
         margin-right: 0;
     }
+
     .resource-item p {
-        text-align: left;
         margin-top: 10px;
-    }
-}
-/* About Page Styling */
-.about-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.about-content {
-    flex: 1;
-    min-width: 300px;
-    margin-right: 20px;
-}
-
-.about-images {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-content h1 {
-    color: #5F07B3;
-    margin-bottom: 20px;
-}
-
-.about-content h2 {
-    color: #5F07B3;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.about-content p,
-.about-content ul {
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-.about-content ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.staff-member {
-    margin-bottom: 30px;
-}
-
-.staff-image {
-    width: 100%;
-    max-width: 200px;
-    border: 5px solid #5F07B3;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.about-images h1 {
-    color: #5F07B3;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.about-images h2 {
-    color: #008DBB;
-    margin-bottom: 5px;
-}
-
-.about-images h3 {
-    color: #5F07B3;
-    margin-bottom: 10px;
-}
-
-.bio-content {
-    display: none;
-    margin-top: 10px;
-}
-
-.toggle-bio {
-    background-color: #008DBB;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.toggle-bio:hover {
-    background-color: #005f80;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-    .about-content,
-    .about-images {
-        margin-right: 0;
-    }
-    .staff-image {
-        margin: 0 auto 10px;
+        text-align: left;
     }
 }
 
-/* About Oxford House Page Styling */
-#about-oxford-house {
-    margin-top: 40px;
-}
-
-#about-oxford-house h1 {
-    color: #5F07B3;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#about-oxford-house h2 {
-    color: #008DBB;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-#about-oxford-house p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-#about-oxford-house ul,
-#about-oxford-house ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-#about-oxford-house ul li,
-#about-oxford-house ol li {
-    margin-bottom: 10px;
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-#about-oxford-house ul li::marker,
-#about-oxford-house ol li::marker {
-    color: #5F07B3;
-}
-
-#about-oxford-house strong {
-    color: #5F07B3;
-}
-
-@media (max-width: 768px) {
-    #about-oxford-house {
-        padding: 0 10px;
-    }
-}
-
-.about-image {
-    width: 25%;
-    max-width: 800px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 8px;
-}
 /* Get Involved Page Styling */
 #get-involved {
     margin-top: 40px;
 }
 
 #get-involved h1 {
-    color: #5F07B3;
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #get-involved h2 {
@@ -605,7 +488,6 @@ a:hover {
 
 .donate-button {
     width: 200px;
-    height: auto;
     display: block;
     margin: 0 auto 30px;
 }
@@ -623,7 +505,6 @@ a:hover {
 }
 
 .volunteer-section h3 {
-    color: #5F07B3;
     margin-bottom: 15px;
 }
 
@@ -641,5 +522,101 @@ a:hover {
 @media (max-width: 768px) {
     .volunteer-options {
         flex-direction: column;
+    }
+}
+
+/* Contact Page Styling */
+#contact-us {
+    margin-top: 40px;
+}
+
+#contact-us h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact-us h2 {
+    color: #008DBB;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.phone-list-request,
+.additional-contact {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.phone-list-request p,
+.additional-contact p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+    }
+}
+
+/* Map Section Styles */
+.map-section {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #5F07B3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Floating Donate Button */
+.floating-donate-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #008DBB;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.floating-donate-button:hover {
+    background-color: #005f80;
+}
+
+.floating-donate-button i {
+    margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+    .floating-donate-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        bottom: 20px;
+        right: 20px;
     }
 }
