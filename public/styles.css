@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #005f80;
+    color: #000000;
 }
 
 /* Container Class to Center Content */
@@ -119,6 +119,7 @@ nav ul li a {
 .menu-icon {
     display: none;
     cursor: pointer;
+    z-index: 9999;
 }
 
 @media (max-width: 768px) {
@@ -126,6 +127,7 @@ nav ul li a {
         display: block;
         font-size: 24px;
         color: white;
+        z-index: 9999;
     }
 
     nav ul {
@@ -137,6 +139,7 @@ nav ul li a {
         background-color: #5F07B3;
         padding: 10px 0;
         min-width: 150px;
+        z-index: 9998;
     }
 
     nav ul li {
@@ -144,6 +147,7 @@ nav ul li a {
         text-align: left;
         padding: 5px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        z-index:9999;
     }
 
     nav ul li:last-child {
