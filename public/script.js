@@ -1,7 +1,10 @@
+// script.js
+
 function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.classList.toggle('show');
 }
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -10,26 +13,35 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
+// Current slide
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0) return; // Exit if no slides
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].classList.remove("active");
     }
+
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add("active");
+    }
 }
+
 
 // Auto slideshow feature (optional)
 let autoSlideIndex = 0;
@@ -37,14 +49,54 @@ autoShowSlides();
 
 function autoShowSlides() {
     let i;
-    let slides = document.getElementsByClassName("slides");
-    let dots = document.getElementsByClassName("dot");
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0) return; // Exit if no slides
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     autoSlideIndex++;
-    if (autoSlideIndex > slides.length) { autoSlideIndex = 1 }
+    if (autoSlideIndex > slides.length) { autoSlideIndex = 1; }
+
     slides[autoSlideIndex - 1].style.display = "block";
-    dots[autoSlideIndex - 1].className += " active";
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+
+    if (dots[autoSlideIndex - 1]) {
+        dots[autoSlideIndex - 1].classList.add("active");
+    }
+
     setTimeout(autoShowSlides, 5000); // Change slide every 5 seconds
 }
+
+// Load external HTML into an element
+function loadHTML(elementID, url, callback) {
+    const element = document.getElementById(elementID);
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            element.innerHTML = data;
+            if (callback) callback();
+        })
+        .catch(err => console.error('Error loading HTML:', err));
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', () => {
+    // Load Header
+    loadHTML('main-header', 'header.html', () => {
+        // After header is loaded, attach event listeners
+        const menuIcon = document.querySelector('.menu-icon');
+        if (menuIcon) {
+            menuIcon.addEventListener('click', toggleMenu);
+        }
+    });
+
+    // Load Footer
+    loadHTML('main-footer', 'footer.html');
+});

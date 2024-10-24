@@ -1,3 +1,5 @@
+/* styles.css */
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -12,14 +14,24 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between; /* Logo on the left, menu icon on the right */
-    align-items: center;
-    background-color: #70005a;
+/* Container Class to Center Content */
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;    /* Center the container */
+    padding: 0 20px;   /* Optional horizontal padding */
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #5F07B3; /* Updated to new purple color */
     color: white;
+}
+
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    position: relative; /* Positioning relative to header for dropdown */
 }
 
 .logo img {
@@ -30,7 +42,7 @@ header {
 
 /* Main Section Styling */
 main {
-    padding: 20px;
+    /* Remove padding since .container handles it */
 }
 
 main section {
@@ -40,16 +52,18 @@ main section {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #70005a;
-    color: white;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
+footer p {
+    margin: 5px 0;
+}
+
 /* Menu Styling */
 nav {
-    position: relative; /* Ensure dropdown is positioned relative to the nav */
+    position: relative;
 }
 
 nav ul {
@@ -68,70 +82,48 @@ nav ul li a {
     text-decoration: none;
     display: block;
     padding: 10px;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 /* Mobile Hamburger Menu Styles */
 .menu-icon {
     display: none;
     cursor: pointer;
-
 }
 
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
-    header {
-        justify-content: space-between; /* Keep logo on the left, menu icon on the right */
-    }
-
-    nav {
-        display: flex;
-        justify-content: flex-end; /* Ensure hamburger is on the right */
-        width: 100%;
-    }
-
     .menu-icon {
         display: block;
-        position: relative; /* Positioned relative to the dropdown */
-        z-index: 1; /* Ensure it's on top of the dropdown */
         font-size: 24px;
-        color: #57a3d2;
+        color: white;
     }
 
     nav ul {
         flex-direction: column;
         display: none; /* Hidden by default */
-        position: absolute; /* Position the menu relative to the hamburger icon */
-        top: 100%; /* Aligns the dropdown below the hamburger */
-        right: 0; /* Align to the right */
-        background-color: #57a3d2; /* Add opacity */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #5F07B3; /* Updated to new purple color */
         padding: 10px 0;
-        min-width: 150px; /* Set a minimum width for the dropdown */
-        z-index: 0; /* Lower z-index to make sure it appears below the icon */
+        min-width: 150px;
     }
 
     nav ul li {
         margin: 0;
-        text-align: left; /* Left align the text in dropdown */
-        padding: 5px 5px; /* Add padding of 5px around text with 15px horizontal padding */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Use transparent border */
+        text-align: left;
+        padding: 5px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     nav ul li:last-child {
         border-bottom: none;
     }
 
-    nav ul li a {
-        white-space: nowrap; /* Prevent text from wrapping */
-        display: inline-block;
-        text-align: left;
-        padding: 5px; /* Add 5px padding around text */
-    }
-
     nav ul.show {
-        display: flex; /* Display the dropdown menu when toggled */
+        display: flex;
         flex-direction: column;
-        width: auto; /* Automatically adjust width based on content */
     }
 }
 
@@ -140,39 +132,46 @@ nav ul li a {
         display: flex;
     }
 }
-        /* Add styles for the two-column layout */
-        .about-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 20px;
-        }
 
-        /* Style for the main content */
-        .about-content {
-            flex: 2; /* Content takes more space */
-            padding-right: 20px;
-        }
+/* Add styles for the two-column layout */
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+}
 
-        /* Style for the image section */
-        .about-images {
-            flex: 1; /* Images take up less space */
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* Add space between the stacked images */
-        }
+/* Style for the main content */
+.about-content {
+    flex: 2;
+    padding-right: 20px;
+}
 
-        .about-images img {
-            width: 100%; /* Make images responsive */
-            max-width: 300px; /* You can adjust the max-width as needed */
-        }
- 
+/* Style for the image section */
+.about-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-images img {
+    width: 100%;
+    max-width: 300px;
+}
+
 /* Hero Section Styling */
 .hero {
     position: relative;
-    max-width: 100%; /* Ensure it doesn't exceed the container's width */
-    height: 400px; /* You can adjust the height as needed */
+    width: 100%;
+    height: 400px;
     overflow: hidden;
+}
+
+.hero .container {
+    height: 100%;
+    position: relative;
 }
 
 .hero-slideshow {
@@ -191,16 +190,13 @@ nav ul li a {
 .slides img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* This ensures images contained in this section */
-    max-width: 1200px; /* Enforce a reasonable max width */
-    max-height: 300px; /* Enforce a reasonable max height */
+    object-fit: contain; /* Adjust as needed */
 }
 
 /* Navigation arrows */
 .prev, .next {
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 5px;
     margin-top: -22px;
     color: white;
@@ -208,19 +204,18 @@ nav ul li a {
     font-size: 18px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0 3px 3px 0;
     user-select: none;
     z-index: 100;
 }
 
 .prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 0 3px 3px 0;
 }
 
 .next {
     right: 0;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px 0 0 3px;
 }
 
 /* Dots/Indicators */
@@ -255,4 +250,173 @@ nav ul li a {
 @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-content {
+        padding-right: 0;
+    }
+}
+
+/* Locations Section Styling */
+.locations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.office {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.office h3 {
+    color: #5F07B3; /* Updated to new purple color */
+}
+
+.office p {
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .locations-container {
+        flex-direction: column;
+    }
+
+    .office {
+        margin: 10px 0;
+    }
+}
+
+/* Mission Section Styling */
+#mission {
+    margin-top: 40px;
+}
+
+#mission h2 {
+    color: #5F07B3; /* Updated to new purple color */
+    margin-bottom: 20px;
+}
+
+#mission p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Additional Styling */
+h2, h3 {
+    color: #5F07B3; /* Updated headings to use purple color */
+}
+
+a {
+    color: #008DBB; /* Updated links to use blue color */
+}
+
+a:hover {
+    color: #005f80; /* Darker shade of blue on hover */
+}
+
+/* Button Styles (if any buttons are used) */
+.button, .btn {
+    background-color: #008DBB; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover, .btn:hover {
+    background-color: #005f80; /* Darker blue on hover */
+}
+/* FAQ Section Styling */
+.faq-container {
+    margin-top: 40px;
+}
+
+.faq-entry {
+    margin-bottom: 30px;
+}
+
+.faq-entry h3 {
+    color: #5F07B3; /* Use the purple color for headings */
+    margin-bottom: 10px;
+}
+
+.faq-entry p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.faq-entry a {
+    color: #008DBB; /* Blue color for links */
+}
+
+.faq-entry a:hover {
+    color: #005f80; /* Darker blue on hover */
+}
+
+.faq-image {
+    float: left;
+    margin-right: 15px;
+    max-width: 150px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .faq-image {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+    }
+}
+
+/* Additional styles for the Q&A page */
+#qanda h1 {
+    color: #5F07B3;
+    margin-bottom: 20px;
+}
+/* Styles for resource list in FAQ Entry */
+.resource-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resource-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.resource-image {
+    max-width: 100px;
+    margin-right: 15px;
+}
+
+.resource-item p {
+    flex: 1;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .resource-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .resource-image {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .resource-item p {
+        text-align: left;
+        margin-top: 10px;
+    }
 }

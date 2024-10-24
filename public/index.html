@@ -3,33 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - F.O.R.A.</title> <!-- Set the title of the page -->
+    <title>Home - F.O.R.A.</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/">
-                <img src="assets/fora.jpg" alt="My Logo">
-            </a>
-        </div>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776;
-            </div>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header id="main-header">
+        <!-- Header content will be loaded here -->
     </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
             <div class="hero-slideshow">
+                <!-- Slides -->
                 <div class="slides fade">
                     <img src="assets/slide1.jpg" alt="Slide 1">
                 </div>
@@ -39,40 +27,71 @@
                 <div class="slides fade">
                     <img src="assets/slide3.jpg" alt="Slide 3">
                 </div>
-    
                 <!-- Navigation Arrows -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-    
             <!-- Dots/Indicators -->
             <div class="dots-container">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-        </section>
-    
+        </div>
+    </section>
 
+    <!-- Main Content -->
     <main>
-        <section id="home">
-            <h2>Welcome to My Website</h2>
-            <p>This is a simple, responsive website with a hamburger menu.</p>
-        </section>
+        <div class="container">
+            <!-- Mission Section -->
+            <section id="mission">
+                <h2>Our Mission</h2>
+                <p>The mission of Friends of Recovery Association is to support and collaborate with Oxford Houses in Kansas, which are self-supporting, democratically-operated homes for recovering individuals. Friends of Recovery and Oxford Houses will assist these individuals to attain and sustain recovery from substance addiction.</p>
+            </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Details about services offered.</p>
-        </section>
+            <!-- Office Locations -->
+            <section id="locations">
+                <h2>Our Offices</h2>
+                <div class="locations-container">
+                    <!-- Main Office -->
+                    <div class="office">
+                        <h3>Main Office</h3>
+                        <p>
+                            6422 Santa Fe Dr.<br>
+                            Overland Park, KS 66202<br>
+                            Phone: <a href="tel:913-722-0367">913-722-0367</a><br>
+                            Fax: 913-722-6325
+                        </p>
+                    </div>
+                    <!-- Wichita Office -->
+                    <div class="office">
+                        <h3>Wichita Office</h3>
+                        <p>
+                            730 N. Waco<br>
+                            Wichita, KS 67203<br>
+                            Phone: <a href="tel:316-264-3174">316-264-3174</a>
+                        </p>
+                    </div>
+                    <!-- Topeka Office -->
+                    <div class="office">
+                        <h3>Topeka Office</h3>
+                        <p>
+                            1100 SW. Wanamaker STE. 5<br>
+                            Topeka, KS 66604<br>
+                            Phone: <a href="tel:785-730-2515">785-730-2515</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Ways to get in touch.</p>
-        </section>
+            <!-- Additional Sections (Optional) -->
+            <!-- You can add more content here if needed -->
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 F.O.R.A. All rights reserved.</p>
+    <!-- Footer -->
+    <footer id="main-footer">
+        <!-- Footer content will be loaded here -->
     </footer>
 
     <script src="script.js"></script>
