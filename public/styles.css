@@ -35,9 +35,11 @@ header .container, footer .container {
 }
 
 .logo img {
-    height: 50px;
+    height: 120px;
     width: auto;
     display: block;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
 }
 
 /* Main Section Styling */
@@ -418,5 +420,226 @@ a:hover {
     .resource-item p {
         text-align: left;
         margin-top: 10px;
+    }
+}
+/* About Page Styling */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.about-images {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-content h1 {
+    color: #5F07B3;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    color: #5F07B3;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.about-content p,
+.about-content ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.staff-member {
+    margin-bottom: 30px;
+}
+
+.staff-image {
+    width: 100%;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.about-images h1 {
+    color: #5F07B3;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.about-images h2 {
+    color: #008DBB;
+    margin-bottom: 5px;
+}
+
+.about-images h3 {
+    color: #5F07B3;
+    margin-bottom: 10px;
+}
+
+.bio-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggle-bio {
+    background-color: #008DBB;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-bio:hover {
+    background-color: #005f80;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .about-content,
+    .about-images {
+        margin-right: 0;
+    }
+    .staff-image {
+        margin: 0 auto 10px;
+    }
+}
+
+/* About Oxford House Page Styling */
+#about-oxford-house {
+    margin-top: 40px;
+}
+
+#about-oxford-house h1 {
+    color: #5F07B3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#about-oxford-house h2 {
+    color: #008DBB;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#about-oxford-house p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#about-oxford-house ul,
+#about-oxford-house ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#about-oxford-house ul li,
+#about-oxford-house ol li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+#about-oxford-house ul li::marker,
+#about-oxford-house ol li::marker {
+    color: #5F07B3;
+}
+
+#about-oxford-house strong {
+    color: #5F07B3;
+}
+
+@media (max-width: 768px) {
+    #about-oxford-house {
+        padding: 0 10px;
+    }
+}
+
+.about-image {
+    width: 25%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+/* Get Involved Page Styling */
+#get-involved {
+    margin-top: 40px;
+}
+
+#get-involved h1 {
+    color: #5F07B3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#get-involved h2 {
+    color: #008DBB;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#get-involved p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.donate-button {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.volunteer-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.volunteer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.volunteer-section h3 {
+    color: #5F07B3;
+    margin-bottom: 15px;
+}
+
+.volunteer-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.volunteer-section ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .volunteer-options {
+        flex-direction: column;
     }
 }

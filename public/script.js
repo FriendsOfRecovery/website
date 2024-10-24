@@ -99,4 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load Footer
     loadHTML('main-footer', 'footer.html');
-});
+    // Add event listeners to toggle bio buttons
+    const toggleButtons = document.querySelectorAll('.toggle-bio');
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const bioContent = button.nextElementSibling;
+            if (bioContent.style.display === 'block') {
+                bioContent.style.display = 'none';
+                button.textContent = 'View Bio';
+            } else {
+                bioContent.style.display = 'block';
+                button.textContent = 'Hide Bio';
+            }
+            });
+        });
+    });
