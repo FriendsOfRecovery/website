@@ -650,3 +650,77 @@ h1, h2, h3 {
         right: 20px;
     }
 }
+/* Hide donate button on small screens */
+@media (max-width: 550px) {
+    .floating-donate-button {
+      display: none;
+    }
+  }
+/*start of oxford house styles*/
+/* Basic styling */
+.oxford-phone {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .oxford-phone h1 {
+    text-align: center;
+  }
+  
+  .oxford-phone .controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .oxford-phone #search-input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .oxford-phone #category-filter {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .oxford-phone table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+  }
+  
+  .oxford-phone th, .oxford-phone td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .oxford-phone th {
+    background-color: #f4f4f4;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .oxford-phone {
+      padding: 10px;
+    }
+  
+    .oxford-phone .controls {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .oxford-phone #search-input, .oxford-phone #category-filter {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    .oxford-phone table {
+      font-size: 14px;
+    }
+  
+    .oxford-phone th, .oxford-phone td {
+      padding: 6px 8px;
+    }
+  }

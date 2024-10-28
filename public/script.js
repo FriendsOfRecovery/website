@@ -105,24 +105,38 @@ function loadHTML(elementID, url, callback) {
 
 // Adjust the floating donate button position when it reaches the footer
 function adjustButtonPosition() {
-    const donateButton = document.querySelector(".floating-donate-button");
-    const footer = document.querySelector("footer");
+  const donateButton = document.querySelector(".floating-donate-button");
+  const footer = document.querySelector("footer");
 
-    if (!donateButton || !footer) return; // Exit if button or footer isn't available
+  if (!donateButton || !footer) return; // Exit if button or footer isn't available
 
-    const footerRect = footer.getBoundingClientRect();
-    const buttonRect = donateButton.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+  // Check screen size and hide button on small screens
+  if (window.innerWidth <= 768) {
+    donateButton.style.display = 'none';
+    return;
+  } else {
+    donateButton.style.display = 'block';
+  }
 
-    // Check if the button is about to overlap with the footer
-    if (footerRect.top <= windowHeight - buttonRect.height) {
-        donateButton.style.position = 'absolute';
-        donateButton.style.bottom = `${footerRect.height + 30}px`;  // Adjust the button above the footer
-    } else {
-        donateButton.style.position = 'fixed';
-        donateButton.style.bottom = '30px';
-    }
+  const footerRect = footer.getBoundingClientRect();
+  const buttonRect = donateButton.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // Check if the button is about to overlap with the footer
+  if (footerRect.top <= windowHeight - buttonRect.height) {
+    donateButton.style.position = 'absolute';
+    donateButton.style.bottom = `${footerRect.height + 30}px`;  // Adjust the button above the footer
+  } else {
+    donateButton.style.position = 'fixed';
+    donateButton.style.bottom = '30px';
+  }
 }
+
+// Call adjustButtonPosition on window resize
+window.addEventListener('resize', adjustButtonPosition);
+
+// Call adjustButtonPosition on page load
+document.addEventListener('DOMContentLoaded', adjustButtonPosition);
 
 // Initialize the page when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -153,3 +167,126 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// Function to load and parse the CSV file
+async function loadCSV() {
+  try {
+    const response = await fetch('phone-list.csv');
+    if (!response.ok) throw new Error('Network response was not ok');
+    const csvText = await response.text();
+    console.log('CSV Text:', csvText); // Debug statement
+    const data = parseCSV(csvText);
+    console.log('Parsed Data:', data); // Debug statement
+    populateTable(data);
+    populateFilterOptions(data);
+    addFilterFunctionality(data);
+    addSearchFunctionality(data);
+  } catch (error) {
+    console.error('Error loading CSV file:', error);
+  }
+}
+
+// Function to parse CSV text into an array of objects
+function parseCSV(csvText) {
+  const lines = csvText.trim().split('\n');
+  const headers = lines[0].split(',');
+  const rows = lines.slice(1);
+
+  return rows.map((line) => {
+    const values = line.split(',');
+    const entry = {};
+    headers.forEach((header, index) => {
+      entry[header.trim()] = values[index].trim();
+    });
+    return entry;
+  });
+}
+
+// Function to populate the table with data
+function populateTable(data) {
+  const tableBody = document.querySelector('#phone-table tbody');
+  tableBody.innerHTML = '';
+
+  data.forEach((entry) => {
+    const row = document.createElement('tr');
+    Object.values(entry).forEach((text) => {
+      const cell = document.createElement('td');
+      cell.textContent = text;
+      row.appendChild(cell);
+    });
+    tableBody.appendChild(row);
+  });
+  console.log('Table populated with data:', data); // Debug statement
+}
+
+// Function to populate the filter options
+function populateFilterOptions(data) {
+  const filterOptions = document.getElementById('filter-options');
+  const categories = Object.keys(data[0]);
+  console.log('Categories:', categories); // Debug statement
+
+  categories.forEach((category) => {
+    if (category.toLowerCase() !== 'name' && category.toLowerCase() !== 'address') { // Exclude "Name" and "Address" categories
+      const selectElement = document.createElement('select');
+      selectElement.id = `${category}-filter`;
+      selectElement.innerHTML = `
+        <option value="All">All</option>
+        ${[...new Set(data.map((entry) => entry[category]))].sort().map((option) => `<option value="${option}">${option}</option>`).join('')}
+      `;
+      filterOptions.appendChild(selectElement);
+    }
+  });
+  console.log('Filter options populated'); // Debug statement
+}
+
+// Function to add filter functionality
+function addFilterFunctionality(data) {
+  const filterOptions = document.getElementById('filter-options');
+  const filterSelects = filterOptions.children;
+
+  function filterData() {
+    const filterValues = Array.from(filterSelects).map((select) => select.value);
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const filteredData = data.filter((entry) => {
+      const matchesFilters = Object.keys(entry).filter(key => key.toLowerCase() !== 'name' && key.toLowerCase() !== 'address').every((key, index) => {
+        const filterValue = filterValues[index];
+        return filterValue === 'All' || entry[key] === filterValue;
+      });
+      const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchTerm));
+      return matchesFilters && matchesSearch;
+    });
+    populateTable(filteredData);
+  }
+
+  Array.from(filterSelects).forEach((select) => {
+    select.addEventListener('change', filterData);
+  });
+
+  // Call filterData once to initialize the table with any active filters
+  filterData();
+}
+
+// Function to add search functionality
+function addSearchFunctionality(data) {
+  const searchInput = document.getElementById('search-input');
+  searchInput.addEventListener('input', () => {
+    const filterOptions = document.getElementById('filter-options');
+    const filterSelects = filterOptions.children;
+    const filterValues = Array.from(filterSelects).map((select) => select.value);
+
+    const filteredData = data.filter((entry) => {
+      const matchesFilters = Object.keys(entry).filter(key => key.toLowerCase() !== 'name' && key.toLowerCase() !== 'address').every((key, index) => {
+        const filterValue = filterValues[index];
+        return filterValue === 'All' || entry[key] === filterValue;
+      });
+      const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchInput.value.toLowerCase()));
+      return matchesFilters && matchesSearch;
+    });
+
+    populateTable(filteredData);
+  });
+}
+
+// Call loadCSV when the page loads
+document.addEventListener('DOMContentLoaded', loadCSV);
