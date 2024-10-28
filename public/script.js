@@ -175,9 +175,7 @@ async function loadCSV() {
     const response = await fetch('phone-list.csv');
     if (!response.ok) throw new Error('Network response was not ok');
     const csvText = await response.text();
-    console.log('CSV Text:', csvText); // Debug statement
     const data = parseCSV(csvText);
-    console.log('Parsed Data:', data); // Debug statement
     populateTable(data);
     populateFilterOptions(data);
     addFilterFunctionality(data);
@@ -223,19 +221,17 @@ function populateTable(data) {
 // Function to populate the filter options
 function populateFilterOptions(data) {
   const filterOptions = document.getElementById('filter-options');
-  const categories = Object.keys(data[0]);
+  const categories = ['County', 'Gender', 'Beds', 'Chapter']; // Only include these categories
   console.log('Categories:', categories); // Debug statement
 
   categories.forEach((category) => {
-    if (category.toLowerCase() !== 'name' && category.toLowerCase() !== 'address') { // Exclude "Name" and "Address" categories
-      const selectElement = document.createElement('select');
-      selectElement.id = `${category}-filter`;
-      selectElement.innerHTML = `
-        <option value="All">All</option>
-        ${[...new Set(data.map((entry) => entry[category]))].sort().map((option) => `<option value="${option}">${option}</option>`).join('')}
-      `;
-      filterOptions.appendChild(selectElement);
-    }
+    const selectElement = document.createElement('select');
+    selectElement.id = `${category.toLowerCase()}-filter`;
+    selectElement.innerHTML = `
+      <option value="All">All</option>
+      ${[...new Set(data.map((entry) => entry[category]))].sort().map((option) => `<option value="${option}">${option}</option>`).join('')}
+    `;
+    filterOptions.appendChild(selectElement);
   });
   console.log('Filter options populated'); // Debug statement
 }
@@ -249,9 +245,9 @@ function addFilterFunctionality(data) {
     const filterValues = Array.from(filterSelects).map((select) => select.value);
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
     const filteredData = data.filter((entry) => {
-      const matchesFilters = Object.keys(entry).filter(key => key.toLowerCase() !== 'name' && key.toLowerCase() !== 'address').every((key, index) => {
+      const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter'].every((category, index) => {
         const filterValue = filterValues[index];
-        return filterValue === 'All' || entry[key] === filterValue;
+        return filterValue === 'All' || entry[category] === filterValue;
       });
       const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchTerm));
       return matchesFilters && matchesSearch;
@@ -276,9 +272,9 @@ function addSearchFunctionality(data) {
     const filterValues = Array.from(filterSelects).map((select) => select.value);
 
     const filteredData = data.filter((entry) => {
-      const matchesFilters = Object.keys(entry).filter(key => key.toLowerCase() !== 'name' && key.toLowerCase() !== 'address').every((key, index) => {
+      const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter'].every((category, index) => {
         const filterValue = filterValues[index];
-        return filterValue === 'All' || entry[key] === filterValue;
+        return filterValue === 'All' || entry[category] === filterValue;
       });
       const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchInput.value.toLowerCase()));
       return matchesFilters && matchesSearch;
