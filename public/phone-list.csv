@@ -1,154 +1,154 @@
-Name,Address,Phone,County,Gender,Beds,Chapter
-Abba,"123 SW. Fillmore St. , Topeka, KS 66606",(785) 329-5524,Shawnee,MC,8,2
-Alicia Sanson,"1512 N. 82nd Ter., Kansas City, KS 66112",(913) 217-7990,Wyandotte,WC,9,9
-Alpha Kainos,"1818 N. Main, Hutchinson, KS 67502",(620) 259-7809,Reno,M,11,13
-Amaryllis West,"204 E. 28th St. , Hays, KS 67601",(785) 621-4829,Ellis,W,9,20
-Ambition,"2813 SW. Engler Ct., Topeka , KS 66614",(785) 329-5512,Shawnee,M,6,19
-Arrowhead,"1920 E. 151st Ter., Olathe, KS 66062",(913) 730-7199,Johnson,M,9,15
-Ash,"301 N. Ash St. , Wichita, KS 67214",(316) 295-4840,Sedgwick,M,14,8
-Autumn,"10420 W. 93rd Ter., Overland Park, KS 66214",(816) 514-8408,Johnson,M,9,9
-Barnes,"704 S. Barlow St., Wichita, KS 67207",(316) 260-8246,Sedgwick,W,9,3
-Barton,"3713 23rd St. , Great Bend, KS 67530",(620) 603-6090,Barton,M,9,16
-Bass,"410 S. Duncan St., Newton, KS 67114",(316) 333-8055,Harvey,M,9,7
-Bekemeyer,"8909 Bekemeyer St. , Wichita, KS 67212",(316) 796-5153,Sedgwick,M,8,8
-Bella Vita,"1600 NW. Taylor St., Topeka, KS 66608",(785) 783-2883,Shawnee,W,8,14
-Bellator,"720 SW. 12th St., Topeka, KS 66612",(785) 329-5631,Shawnee,M,13,19
-Belle Star,"907 5th Ave. , Dodge City, KS 67801",(620) 371-6254,Ford,M,6,6
-Belle West,"5537 SW. 27th St., Topeka , KS 66614",(785) 730-2368,Shawnee,M,8,14
-Beverly,"205 N. Beverly Ave. , Newton, KS 67114",(316) 333-8116,Harvey,WC,8,7
-Blackfoot,"600 W. Elm St. , Olathe, KS 66061",(816) 603-0588,Johnson,M,8,4
-Blue Sage,"1515 S. Blue Sage Cir., Wichita, KS 67230",(316) 831-7584,Sedgwick,M,8,7
-Boot Hill,"807 1st Ave. , Dodge City, KS 67801",(620) 253-7420,Ford,M,9,6
-Braeburn,"1739 N. Harvard Ave. , Wichita, KS 67208",(316) 425-7510,Sedgwick,M,8,3
-Broughham,"1317 E. Sheridan Bridge Ln., Olathe, KS 66062",(913) 839-3055,Johnson,W,8,15
-Bryant,"1428 E. Sunvale Dr., Olathe, KS 66062",(913) 839-2494,Johnson,WC,9,1
-Buchanan,"501 SW. Buchanan St., Topeka, KS 66606",(785) 329-5324,shawnee,MC,10,2
-Canaan,"3121 Canaan Valley Dr. , Kansas City, KS 66109",(913) 721-5529,Wyandotte,M,10,9
-Centennial North,"1712 W. 3rd St., Lawrence, KS 66044",(785) 424-7666,Douglas,M,7,5
-Chaparral,"1105 E. 27th St., Lawrence, KS 66046",(785) 856-0731,Douglas,M,10,5
-Charis,"2608 Highland Ave., Salina, KS 67401",(785) 404-1904,Saline,W,7,11
-Chautauqua,"149 N. Chautauqua St., Wichita, KS 67214",(316) 239-7671,Sedgwick,M,8,7
-Clementine,"806 Central Ave. , Dodge City, KS 67801",(620) 371-5709,Ford,W,8,6
-Cloverleaf,"6934 Russell St., Overland Park, KS 66204",(913) 217-7578,Johnson,M,1,17
-College Grove,"100 E. 15th St. , Hutchinson, KS 67501",(620) 259-6645,Reno,W,10,13
-College Hill,"2017 S. Chautauqua Ave. , Wichita, KS 67214",(316) 295-4585,Sedgwick,M,11,3
-Cooper,"1001 N. Cooper St., Olathe, KS 66061",(913) 768-0324,Johnson,M,7,4
-Credence,"1812 Monroe St., Great Bend, KS 67530",(620) 603-6014,Barton,M,9,16
-Crossroads,"1600 SW College Ave. , Topeka, KS 66604",(785) 783-3416,Shawnee,M,10,2
-Darnell,"6422 Mullen Rd., Shawnee, KS 66216",(913) 544-1396,Johnson,W,9,1
-Deliverance,"1502 12th St. , Great Bend, KS 67530",(620) 282-5130,Barton,W,10,16
-Dharma,"778 Lake St. , Lawrence, KS 66044",(785) 856-0638,Douglas,W,8,5
-Duncan,"3063 S. Bonn Ave., Wichita, KS 67217",(316) 440-6819,Sedgwick,W,7,3
-Dunsworth,"1333 N. Dunsworth Ave., Wichita, KS 67212",(316) 260-2364,Sedgwick,M,11,7
-Enlightenment,"900 SW Clay St. , Topeka, KS 66606",(785) 329-6275,Shawnee,M,N/A,19
-Fairway,"6601 W. 83rd St., Overland Park , KS 66204",(913) 549-3093,Johnson,M,7,9
-Faith,"1411 SW Lincoln St. , Topeka, KS 66604",(785) 783-3983,Shawnee,W,6,14
-Fort Hays,"203 W. 34th St. , Hays, KS 67601",(785) 621-4825,Ellis,M,10,16
-Forte Perfectus,"915 SW Munson Ave. , Topeka , KS 66604",(785) 329-6324,Shawnee,WC,8,19
-Freeman,"2827 N. 102nd St. , Kansas City , KS 66109",(913) 544-1082,Wyandotte,M,9,9
-Friedberg,"1626 N. Gentry Dr., Wichita, KS 67208",(316) 358-9669,Sedgwick,WC,7,8
-Gallery,"1036 N. Lincoln St., Olathe, KS 66061",(913) 839-8300,Johnson,WC,7,4
-Gillette,"8931 Gillette St., Lenexa, KS 66215",(913) 499-8276,Johnson,MC,9,10
-Grace Haven,"1418 N. Valleyview Ct., Wichita, KS 67212",(316) 440-4624,Sedgwick,WC,10,8
-Grantioch,"9100 W. 81st Ter., Overland Park, KS 66204",(913) 303-3359,Johnson,M,8,1
-Gratitude Manor,"1528 S. Hillside St. , Wichita, KS 67211",(316) 927-5701,Sedgwick,M,7,3
-Griffin,"115 W. Jefferson St. , Pittsburg, KS 66762",(620) 778-6845,Crawford,M,6,12
-Gunsmoke,"1611 N. 2nd Ave. , Dodge, KS 67801",(620) 225-7676,Ford,M,8,6
-Halina,"903 Manor Rd., Salina, KS 67401",(785) 404-4904,Saline,WC,7,11
-Halo,"1920 N. Crestline St. , Wichita, KS 67212",(316) 358-7283,Sedgwick,M,7,8
-Halsey,"6524 Craig St. , Merriam, KS 66202",(913) 701-6250,Johnson,MC,9,10
-Hardy,"8218 Hardy St., Overland Park, KS 66204",(913) 322-0798,Johnson,M,9,17
-Hastings,"223 Curtis St., Hutchinson, KS 67502",(620) 888-5234,Reno,MC,9,13
-Hazel,"1811 N. Redbarn Ln., Wichita, KS 67212",(316) 977-9328,Sedgwick,W,8,7
-Hensonback,"105 W. 30th, Hutchinson, KS 67501",(620) 259-5919,Reno,WC,12,13
-Heritage,"9130 Switzer St., Overland Park, KS 66214",(913) 322-9095,Johnson,WC,7,17
-Highland Crest,"1130 SE 35th Ter., Topeka, KS 66608",(785) 240-6460,Shawnee,M,7,19
-Holliday,"1005 1st Ave. , Dodge, KS 67801",(620) 253-5932,Ford,M,8,6
-Hope Central,"2201 Polk St., Great Bend, KS 67530",(620) 603-8911,Barton,M,10,16
-Ichabod,"1360 SW Garfield Ave. , Topeka , KS 66604",(785) 329-5067,Shawnee,M,10,2
-Iliad,"2404 S. Homer St. , Pittsburg, KS 66762",(620) 404-4746,Crawford,M,9,12
-Infinity,"2552 W. 21st St. , Wichita, KS 67203",(316) 201-6865,Sedgwick,W,7,7
-Iris,"1009 Connecticut St., Lawrence, KS 66046",(785) 424-7979,Douglas,W,7,5
-Ivy Rose,"1252 SW Mulvane St., Topeka, KS 66604",(785) 329-6348,Shawnee,W,7,2
-Jayhawk,"509 E. Walnut Ave., Salina, KS 67401",(785) 404-2283,Saline,M,10,11
-Jimmers,"7 W. 19th Ave. , Hutchinson, KS 67502",(620) 888-5554,Reno,M,9,13
-Johnson Drive,"9800 Johnson Dr., Merriam, KS 66203",(913) 232-9753,Johnson,M,12,1
-Jonah,"1622 SW Webster Ave., Topeka, KS 66604",(785) 329-5605,Shawnee,M,N/A,2
-Kennedy,"1333 E. 154th Ter., Olathe, KS 66062",(913) 808-3536,Johnson,MC,7,4
-Kinkaid,"3443 Kinkaid Ct., Wichita, KS 67218",(316) 719-3990,Sedgwick,WC,10,3
-Kratos,"2401 Lincoln Dr. , Hays, KS 67601",(785) 621-4889,Ellis,M,10,16
-Lakestone,"1206 E. Maywood St., Wichita, KS 67216",(316) 719-2084,Sedgwick,M,9,8
-Lane,"1730 SW Washburn Ave. , Topeka, KS 66606",(785) 783-8574,Shawnee,M,8,14
-Lawrence One,"1620 W. 19th Ter. , Lawrence, KS 66046",(785) 842-1621,Douglas,M,8,5
-Layton,"10540 Bond St., Overland Park, KS 66214",(913) 912-1014,Johnson,M,8,4
-Leo,"733 S. LeeAnne Cr. , Wichita , KS 67213",(316) 260-8826,Sedgwick,M,10,8
-Libertas,"3010 SW 16th St., Topeka, KS 66614",(785) 329-6425,Shawnee,M,8,19
-Lighthouse,"2024 SW Fairlawn Rd., Topeka, KS 66604",(785) 478-5614,Shawnee,WC,9,2
-Lincoln,"1817 S. Denene St. , Wichita, KS 67213",(316) 719-2084,Sedgwick,M,9,3
-Louis,"707 Hawthorne Ln., Newton, KS 67114",(316) 333-8234,Harvey,M,7,7
-Mackey,"8239 Mackey St., Overland Park, KS 66204",(913) 601-3829,Johnson,M,7,17
-Mahaffie,"1931 E. Sheridan Bridge Ln. , Olathe, KS 66062",(913) 712-8507,Johnson,M,8,15
-Maverick,"5220 England St., Merriam, KS 66203",(913) 213-5308,Johnson,M,8,9
-Merriam,"9938 W. 56th St., Merriam, KS 66203",(913) 544-1003,Johnson,WC,7,4
-Metanoia,"1126 N. Lewellen St. , Wichita, KS 67203",(316) 927-5780,Sedgwick,W,9,3
-Metcalf,"6936 Metcalf AVE, Overland Park, KS 66204",(913) 601-4995,Johnson,M,8,10
-Midtown,"1617 N. Park Pl., Wichita, KS 67203",(316) 977-8894,Sedgwick,M,8,3
-Monarch,"3205 N. Michigan St., Pittsburg, KS 66762",(620) 404-4225,Crawford,W,6,12
-Monrovia,"7508 Monrovia St., Lenexa, KS 66215",(913) 808-3705,Johnson,M,10,1
-Niam,"1500 N. Main St. , Hutchinson, KS 67501",(620) 259-8151,Reno,M,14,13
-Normandy,"156 N. Normandy St., Olathe, KS 66061",(913) 780-4909,Johnson,WC,8,4
-Olathe,"7829 W. 97th St., Overland Park, KS 66212",(913) 257-5304,Johnson,M,8,15
-Old Shawnee,"6135 Lucille Ln., Shawnee, KS 66203",(913) 322-6031,Johnson,M,9,1
-Orme,"8215 E. Orme St. , Wichita, KS 67203",(316) 425-5748,Sedgwick,M,6,8
-Parallel,"8730 Parallel Pkwy. , Kansas City, KS 66106",(913) 217-7717,Wyandotte,M,10,9
-Park,"936 Holiday Dr. , Lawrence, KS 66049",(785) 424-7374,Douglas,WC,6,5
-Park Place,"1912 Oliver, Wichita, KS 67218",(316) 425-3759,Sedgwick,WC,11,8
-Partridge,"1968 E. Sheridan Bridge Ln., Olathe, KS 66062",(913) 839-8748,Johnson,W,7,15
-Pawnee,"2359 S. Terrace, Wichita, KS 67218",(316) 719-2482,Sedgwick,M,12,7
-Peyton,"1006 E. Willow Dr., Olathe, KS 66061",(913) 839-1734,Johnson,M,9,4
-Pflumm,"6451 Pflumm Rd., Shawnee, KS 66216",(913) 213-5065,Johnson,M,8,1
-Phillips West,"120 W. 20th Ave. , Hutchinson, KS 67501",(620) 259-5842,Reno,M,9,13
-Phoenix,"2507 Omaha St., Pittsburg, KS 66762",(620) 404-4162,Crawford,M,6,12
-Pitkin,"5627 Pitkin St., Kansas City , KS 66106",(913) 596-9768,Wyandotte,M,11,9
-Polaris,"2916 Walnut St. , Hays, KS 67601",(785) 621-4408,Ellis,M,9,16
-Promise,"2402 N. Halstead, Hutchinson, KS 67502",(620) 888-5654,Reno,M,9,13
-Providence Manor,"1717 SW Lincoln St., Topeka , KS 66604",(785) 730-2668,Shawnee,M,7,14
-Purcell,"2508 Purcells Mills Rd., Manhattan, KS 66502",(785) 320-7013,Riley,W,7,11
-Quentin,"260 N. Quentin St. , Wichita, KS 67208",(316) 260-3412,Sedgwick,M,8,3
-Quivira,"5919 Quivira Rd., Shawnee, KS 66216",(913) 322-1673,Johnson,WC,10,9
-Richmond,"1131 N. Richmond St. , Wichita, KS 67203",(316) 272-5789,Sedgwick,M,7,8
-Ridge,"6415 Goodman Dr., Merriam, KS 66202",(913) 948-9424,Johnson,M,7,15
-Rita,"2003 W. Rita St. , Wichita, KS 67213",(316) 972-9254,Sedgwick,W,8,7
-Robin,"1839 N. Robin Rd., Wichita, KS 67212",(316) 440-3610,Sedgwick,W,7,8
-Ruben,"2316 SW Indian Trail, Topeka, KS 66614",(785) 329-5976,Shawnee,M,6,14
-Samoset,"602 E. Centennial Dr., Pittsburg, KS 66762",(620) 404-4226,Crawford,M,8,12
-Santa Fe,"6312 Santa Fe Dr., Overland Park, KS 66202",(913) 322-0197,Johnson,M,6,1
-Serenity Hills,"9433 Knox Dr., Overland Park, KS 66212",(913) 948-5387,Johnson,W,8,1
-Serenity Way,"2815 Broadway St., Great Bend, KS 67530",(620) 603-6075,Barton,W,8,16
-Shocker,"604 E. Leslie Ave., Salina, KS 67401",(785) 404-6176,Saline,M,6,11
-Shunga,"5125 SW 26th Ter., Topeka, KS 66614",(785) 329-6355,Shawnee,M,8,2
-Sky,"1916 SW Warner Ct., Topeka, KS 66614",(785) 730-2048,Shawnee,M,7,14
-Slater,"8809 W. 118 St., Overland Park, KS 66210",(913) 428-0955,Johnson,M,8,10
-Sophia,"515 W. Beloit Ave. , Salina, KS 67401",(785) 404-2607,Saline,W,7,11
-Stewart,"10208 Switzer Rd., Overland Park, KS 66212",(913) 232-9813,Johnson,M,8,17
-Sunset Hills,"921 Holiday Dr. , Lawrence, KS 66049",(785) 424-7374,Douglas,WC,7,5
-Sunvale,"1413 E. Sunvale Ter., Olathe, KS 66062",(913) 839-1810,Johnson,W,9,4
-Terrace,"8012 W. 64th Terr., Merriam, KS 66202",(913) 400-3347,Johnson,M,9,17
-Timber Creek,"1904 E. 20th Ave, Winfield, KS 67156",(620) 301-1267,Cowley,M,8,18
-Tomahawk,"21 Tomahawk Rd. , Hutchinson, KS 67502",(620) 888-5220,Reno,W,9,13
-Tree,"903 W. Maple St. , Wichita, KS 67213",(316) 425-5304,Sedgwick,M,9,8
-Trojan,"823 W. 10th Ave, Topeka, KS 66612",(785) 260-3367,Shawnee,M,N/A,14
-Tyler Road,"402 S. Tyler Rd., Wichita, KS 67212",(316) 295-2724,Sedgwick,M,6,8
-Village,"7719 Mission Rd., Prairie Village, KS 66208",(913) 549-4764,Johnson,WC,8,10
-Waco,"1324 N. Topeka St. , Wichita, KS 67214",(316) 613-2957,Sedgwick,M,12,3
-Walnut,"115 S. Walnut St., Olathe, KS 66061",(913) 608-9727,Johnson,M,10,15
-Warren,"5608 Halsey St., Shawnee, KS 66216",(913) 766-6672,Johnson,M,8,10
-Washburn,"5401 SW 28th St., Topeka , KS 66614",(785) 288-3868,Shawnee,M,9,14
-Webster,"3305 Rockwood Dr., Hutchinson, KS 67502",(620) 259-4091,Reno,M,10,13
-Wedgewood,"1055 W. 31st St. N., 67204 Wichita, KS 67204",(316) 831-1103,Sedgwick,M,8,3
-White House,"15103 Reeds St., Overland Park, KS 66223",(913) 215-2250,Johnson,M,8,4
-Wildcat,"101 E. Moreland Ave. , Salina, KS 67401",(785) 404-2259,Saline,M,7,11
-Willow Creek,"2011 Andrews St, Winfield, KS 67156",(620) 301-1448,Cowley,M,7,18
-Willow Park,"804 SW Lindenwood Ave., Topeka , KS 66606",(785) 783-8024,Shawnee,W,7,2
-Woodchuck,"1706 N. Woodchuck St., Wichita, KS 67212",(316) 358-7974,Sedgwick,M,4,7
-Wren,"1005 SW 10th Ave., Topeka, KS 66603",(785) 246-6041,Shawnee,M,10,14
+Name	Address	Phone	County	Gender	Beds	Chapter
+Abba	123 SW. Fillmore St. , Topeka, KS 66606	(785) 329-5524	Shawnee	MC	8	2
+Alicia Sanson	1512 N. 82nd Ter., Kansas City, KS 66112	(913) 217-7990	Wyandotte	WC	9	9
+Alpha Kainos	1818 N. Main, Hutchinson, KS 67502	(620) 259-7809	Reno	M	11	13
+Amaryllis West	204 E. 28th St. , Hays, KS 67601	(785) 621-4829	Ellis	W	9	20
+Ambition	2813 SW. Engler Ct., Topeka , KS 66614	(785) 329-5512	Shawnee	M	6	19
+Arrowhead	1920 E. 151st Ter., Olathe, KS 66062	(913) 730-7199	Johnson	M	9	15
+Ash	301 N. Ash St. , Wichita, KS 67214	(316) 295-4840	Sedgwick	M	14	8
+Autumn	10420 W. 93rd Ter., Overland Park, KS 66214	(816) 514-8408	Johnson	M	9	9
+Barnes	704 S. Barlow St., Wichita, KS 67207	(316) 260-8246	Sedgwick	W	9	3
+Barton	3713 23rd St. , Great Bend, KS 67530	(620) 603-6090	Barton	M	9	16
+Bass	410 S. Duncan St., Newton, KS 67114	(316) 333-8055	Harvey	M	9	7
+Bekemeyer	8909 Bekemeyer St. , Wichita, KS 67212	(316) 796-5153	Sedgwick	M	8	8
+Bella Vita	1600 NW. Taylor St., Topeka, KS 66608	(785) 783-2883	Shawnee	W	8	14
+Bellator	720 SW. 12th St., Topeka, KS 66612	(785) 329-5631	Shawnee	M	13	19
+Belle Star	907 5th Ave. , Dodge City, KS 67801	(620) 371-6254	Ford	M	6	6
+Belle West	5537 SW. 27th St., Topeka , KS 66614	(785) 730-2368	Shawnee	M	8	14
+Beverly	205 N. Beverly Ave. , Newton, KS 67114	(316) 333-8116	Harvey	WC	8	7
+Blackfoot	600 W. Elm St. , Olathe, KS 66061	(816) 603-0588	Johnson	M	8	4
+Blue Sage	1515 S. Blue Sage Cir., Wichita, KS 67230	(316) 831-7584	Sedgwick	M	8	7
+Boot Hill	807 1st Ave. , Dodge City, KS 67801	(620) 253-7420	Ford	M	9	6
+Braeburn	1739 N. Harvard Ave. , Wichita, KS 67208	(316) 425-7510	Sedgwick	M	8	3
+Broughham	1317 E. Sheridan Bridge Ln., Olathe, KS 66062	(913) 839-3055	Johnson	W	8	15
+Bryant	1428 E. Sunvale Dr., Olathe, KS 66062	(913) 839-2494	Johnson	WC	9	1
+Buchanan	501 SW. Buchanan St., Topeka, KS 66606	(785) 329-5324	Shawnee	MC	10	2
+Canaan	3121 Canaan Valley Dr. , Kansas City, KS 66109	(913) 721-5529	Wyandotte	M	10	9
+Centennial North	1712 W. 3rd St., Lawrence, KS 66044	(785) 424-7666	Douglas	M	7	5
+Chaparral	1105 E. 27th St., Lawrence, KS 66046	(785) 856-0731	Douglas	M	10	5
+Charis	2608 Highland Ave., Salina, KS 67401	(785) 404-1904	Saline	W	7	11
+Chautauqua	149 N. Chautauqua St., Wichita, KS 67214	(316) 239-7671	Sedgwick	M	8	7
+Clementine	806 Central Ave. , Dodge City, KS 67801	(620) 371-5709	Ford	W	8	6
+Cloverleaf	6934 Russell St., Overland Park, KS 66204	(913) 217-7578	Johnson	M	1	17
+College Grove	100 E. 15th St. , Hutchinson, KS 67501	(620) 259-6645	Reno	W	10	13
+College Hill	2017 S. Chautauqua Ave. , Wichita, KS 67214	(316) 295-4585	Sedgwick	M	11	3
+Cooper	1001 N. Cooper St., Olathe, KS 66061	(913) 768-0324	Johnson	M	7	4
+Credence	1812 Monroe St., Great Bend, KS 67530	(620) 603-6014	Barton	M	9	16
+Crossroads	1600 SW College Ave. , Topeka, KS 66604	(785) 783-3416	Shawnee	M	10	2
+Darnell	6422 Mullen Rd., Shawnee, KS 66216	(913) 544-1396	Johnson	W	9	1
+Deliverance	1502 12th St. , Great Bend, KS 67530	(620) 282-5130	Barton	W	10	16
+Dharma	778 Lake St. , Lawrence, KS 66044	(785) 856-0638	Douglas	W	8	5
+Duncan	3063 S. Bonn Ave., Wichita, KS 67217	(316) 440-6819	Sedgwick	W	7	3
+Dunsworth	1333 N. Dunsworth Ave., Wichita, KS 67212	(316) 260-2364	Sedgwick	M	11	7
+Enlightenment	900 SW Clay St. , Topeka, KS 66606	(785) 329-6275	Shawnee	M	N/A	19
+Fairway	6601 W. 83rd St., Overland Park , KS 66204	(913) 549-3093	Johnson	M	7	9
+Faith	1411 SW Lincoln St. , Topeka, KS 66604	(785) 783-3983	Shawnee	W	6	14
+Fort Hays	203 W. 34th St. , Hays, KS 67601	(785) 621-4825	Ellis	M	10	16
+Forte Perfectus	915 SW Munson Ave. , Topeka , KS 66604	(785) 329-6324	Shawnee	WC	8	19
+Freeman	2827 N. 102nd St. , Kansas City , KS 66109	(913) 544-1082	Wyandotte	M	9	9
+Friedberg	1626 N. Gentry Dr., Wichita, KS 67208	(316) 358-9669	Sedgwick	WC	7	8
+Gallery	1036 N. Lincoln St., Olathe, KS 66061	(913) 839-8300	Johnson	WC	7	4
+Gillette	8931 Gillette St., Lenexa, KS 66215	(913) 499-8276	Johnson	MC	9	10
+Grace Haven	1418 N. Valleyview Ct., Wichita, KS 67212	(316) 440-4624	Sedgwick	WC	10	8
+Grantioch	9100 W. 81st Ter., Overland Park, KS 66204	(913) 303-3359	Johnson	M	8	1
+Gratitude Manor	1528 S. Hillside St. , Wichita, KS 67211	(316) 927-5701	Sedgwick	M	7	3
+Griffin	115 W. Jefferson St. , Pittsburg, KS 66762	(620) 778-6845	Crawford	M	6	12
+Gunsmoke	1611 N. 2nd Ave. , Dodge, KS 67801	(620) 225-7676	Ford	M	8	6
+Halina	903 Manor Rd., Salina, KS 67401	(785) 404-4904	Saline	WC	7	11
+Halo	1920 N. Crestline St. , Wichita, KS 67212	(316) 358-7283	Sedgwick	M	7	8
+Halsey	6524 Craig St. , Merriam, KS 66202	(913) 701-6250	Johnson	MC	9	10
+Hardy	8218 Hardy St., Overland Park, KS 66204	(913) 322-0798	Johnson	M	9	17
+Hastings	223 Curtis St., Hutchinson, KS 67502	(620) 888-5234	Reno	MC	9	13
+Hazel	1811 N. Redbarn Ln., Wichita, KS 67212	(316) 977-9328	Sedgwick	W	8	7
+Hensonback	105 W. 30th, Hutchinson, KS 67501	(620) 259-5919	Reno	WC	12	13
+Heritage	9130 Switzer St., Overland Park, KS 66214	(913) 322-9095	Johnson	WC	7	17
+Highland Crest	1130 SE 35th Ter., Topeka, KS 66608	(785) 240-6460	Shawnee	M	7	19
+Holliday	1005 1st Ave. , Dodge, KS 67801	(620) 253-5932	Ford	M	8	6
+Hope Central	2201 Polk St., Great Bend, KS 67530	(620) 603-8911	Barton	M	10	16
+Ichabod	1360 SW Garfield Ave. , Topeka , KS 66604	(785) 329-5067	Shawnee	M	10	2
+Iliad	2404 S. Homer St. , Pittsburg, KS 66762	(620) 404-4746	Crawford	M	9	12
+Infinity	2552 W. 21st St. , Wichita, KS 67203	(316) 201-6865	Sedgwick	W	7	7
+Iris	1009 Connecticut St., Lawrence, KS 66046	(785) 424-7979	Douglas	W	7	5
+Ivy Rose	1252 SW Mulvane St., Topeka, KS 66604	(785) 329-6348	Shawnee	W	7	2
+Jayhawk	509 E. Walnut Ave., Salina, KS 67401	(785) 404-2283	Saline	M	10	11
+Jimmers	7 W. 19th Ave. , Hutchinson, KS 67502	(620) 888-5554	Reno	M	9	13
+Johnson Drive	9800 Johnson Dr., Merriam, KS 66203	(913) 232-9753	Johnson	M	12	1
+Jonah	1622 SW Webster Ave., Topeka, KS 66604	(785) 329-5605	Shawnee	M	N/A	2
+Kennedy	1333 E. 154th Ter., Olathe, KS 66062	(913) 808-3536	Johnson	MC	7	4
+Kinkaid	3443 Kinkaid Ct., Wichita, KS 67218	(316) 719-3990	Sedgwick	WC	10	3
+Kratos	2401 Lincoln Dr. , Hays, KS 67601	(785) 621-4889	Ellis	M	10	16
+Lakestone	1206 E. Maywood St., Wichita, KS 67216	(316) 719-2084	Sedgwick	M	9	8
+Lane	1730 SW Washburn Ave. , Topeka, KS 66606	(785) 783-8574	Shawnee	M	8	14
+Lawrence One	1620 W. 19th Ter. , Lawrence, KS 66046	(785) 842-1621	Douglas	M	8	5
+Layton	10540 Bond St., Overland Park, KS 66214	(913) 912-1014	Johnson	M	8	4
+Leo	733 S. LeeAnne Cr. , Wichita , KS 67213	(316) 260-8826	Sedgwick	M	10	8
+Libertas	3010 SW 16th St., Topeka, KS 66614	(785) 329-6425	Shawnee	M	8	19
+Lighthouse	2024 SW Fairlawn Rd., Topeka, KS 66604	(785) 478-5614	Shawnee	WC	9	2
+Lincoln	1817 S. Denene St. , Wichita, KS 67213	(316) 719-2084	Sedgwick	M	9	3
+Louis	707 Hawthorne Ln., Newton, KS 67114	(316) 333-8234	Harvey	M	7	7
+Mackey	8239 Mackey St., Overland Park, KS 66204	(913) 601-3829	Johnson	M	7	17
+Mahaffie	1931 E. Sheridan Bridge Ln. , Olathe, KS 66062	(913) 712-8507	Johnson	M	8	15
+Maverick	5220 England St., Merriam, KS 66203	(913) 213-5308	Johnson	M	8	9
+Merriam	9938 W. 56th St., Merriam, KS 66203	(913) 544-1003	Johnson	WC	7	4
+Metanoia	1126 N. Lewellen St. , Wichita, KS 67203	(316) 927-5780	Sedgwick	W	9	3
+Metcalf	6936 Metcalf AVE, Overland Park, KS 66204	(913) 601-4995	Johnson	M	8	10
+Midtown	1617 N. Park Pl., Wichita, KS 67203	(316) 977-8894	Sedgwick	M	8	3
+Monarch	3205 N. Michigan St., Pittsburg, KS 66762	(620) 404-4225	Crawford	W	6	12
+Monrovia	7508 Monrovia St., Lenexa, KS 66215	(913) 808-3705	Johnson	M	10	1
+Niam	1500 N. Main St. , Hutchinson, KS 67501	(620) 259-8151	Reno	M	14	13
+Normandy	156 N. Normandy St., Olathe, KS 66061	(913) 780-4909	Johnson	WC	8	4
+Olathe	7829 W. 97th St., Overland Park, KS 66212	(913) 257-5304	Johnson	M	8	15
+Old Shawnee	6135 Lucille Ln., Shawnee, KS 66203	(913) 322-6031	Johnson	M	9	1
+Orme	8215 E. Orme St. , Wichita, KS 67203	(316) 425-5748	Sedgwick	M	6	8
+Parallel	8730 Parallel Pkwy. , Kansas City, KS 66106	(913) 217-7717	Wyandotte	M	10	9
+Park	936 Holiday Dr. , Lawrence, KS 66049	(785) 424-7374	Douglas	WC	6	5
+Park Place	1912 Oliver, Wichita, KS 67218	(316) 425-3759	Sedgwick	WC	11	8
+Partridge	1968 E. Sheridan Bridge Ln., Olathe, KS 66062	(913) 839-8748	Johnson	W	7	15
+Pawnee	2359 S. Terrace, Wichita, KS 67218	(316) 719-2482	Sedgwick	M	12	7
+Peyton	1006 E. Willow Dr., Olathe, KS 66061	(913) 839-1734	Johnson	M	9	4
+Pflumm	6451 Pflumm Rd., Shawnee, KS 66216	(913) 213-5065	Johnson	M	8	1
+Phillips West	120 W. 20th Ave. , Hutchinson, KS 67501	(620) 259-5842	Reno	M	9	13
+Phoenix	2507 Omaha St., Pittsburg, KS 66762	(620) 404-4162	Crawford	M	6	12
+Pitkin	5627 Pitkin St., Kansas City , KS 66106	(913) 596-9768	Wyandotte	M	11	9
+Polaris	2916 Walnut St. , Hays, KS 67601	(785) 621-4408	Ellis	M	9	16
+Promise	2402 N. Halstead, Hutchinson, KS 67502	(620) 888-5654	Reno	M	9	13
+Providence Manor	1717 SW Lincoln St., Topeka , KS 66604	(785) 730-2668	Shawnee	M	7	14
+Purcell	2508 Purcells Mills Rd., Manhattan, KS 66502	(785) 320-7013	Riley	W	7	11
+Quentin	260 N. Quentin St. , Wichita, KS 67208	(316) 260-3412	Sedgwick	M	8	3
+Quivira	5919 Quivira Rd., Shawnee, KS 66216	(913) 322-1673	Johnson	WC	10	9
+Richmond	1131 N. Richmond St. , Wichita, KS 67203	(316) 272-5789	Sedgwick	M	7	8
+Ridge	6415 Goodman Dr., Merriam, KS 66202	(913) 948-9424	Johnson	M	7	15
+Rita	2003 W. Rita St. , Wichita, KS 67213	(316) 972-9254	Sedgwick	W	8	7
+Robin	1839 N. Robin Rd., Wichita, KS 67212	(316) 440-3610	Sedgwick	W	7	8
+Ruben	2316 SW Indian Trail, Topeka, KS 66614	(785) 329-5976	Shawnee	M	6	14
+Samoset	602 E. Centennial Dr., Pittsburg, KS 66762	(620) 404-4226	Crawford	M	8	12
+Santa Fe	6312 Santa Fe Dr., Overland Park, KS 66202	(913) 322-0197	Johnson	M	6	1
+Serenity Hills	9433 Knox Dr., Overland Park, KS 66212	(913) 948-5387	Johnson	W	8	1
+Serenity Way	2815 Broadway St., Great Bend, KS 67530	(620) 603-6075	Barton	W	8	16
+Shocker	604 E. Leslie Ave., Salina, KS 67401	(785) 404-6176	Saline	M	6	11
+Shunga	5125 SW 26th Ter., Topeka, KS 66614	(785) 329-6355	Shawnee	M	8	2
+Sky	1916 SW Warner Ct., Topeka, KS 66614	(785) 730-2048	Shawnee	M	7	14
+Slater	8809 W. 118 St., Overland Park, KS 66210	(913) 428-0955	Johnson	M	8	10
+Sophia	515 W. Beloit Ave. , Salina, KS 67401	(785) 404-2607	Saline	W	7	11
+Stewart	10208 Switzer Rd., Overland Park, KS 66212	(913) 232-9813	Johnson	M	8	17
+Sunset Hills	921 Holiday Dr. , Lawrence, KS 66049	(785) 424-7374	Douglas	WC	7	5
+Sunvale	1413 E. Sunvale Ter., Olathe, KS 66062	(913) 839-1810	Johnson	W	9	4
+Terrace	8012 W. 64th Terr., Merriam, KS 66202	(913) 400-3347	Johnson	M	9	17
+Timber Creek	1904 E. 20th Ave, Winfield, KS 67156	(620) 301-1267	Cowley	M	8	18
+Tomahawk	21 Tomahawk Rd. , Hutchinson, KS 67502	(620) 888-5220	Reno	W	9	13
+Tree	903 W. Maple St. , Wichita, KS 67213	(316) 425-5304	Sedgwick	M	9	8
+Trojan	823 W. 10th Ave, Topeka, KS 66612	(785) 260-3367	Shawnee	M	N/A	14
+Tyler Road	402 S. Tyler Rd., Wichita, KS 67212	(316) 295-2724	Sedgwick	M	6	8
+Village	7719 Mission Rd., Prairie Village, KS 66208	(913) 549-4764	Johnson	WC	8	10
+Waco	1324 N. Topeka St. , Wichita, KS 67214	(316) 613-2957	Sedgwick	M	12	3
+Walnut	115 S. Walnut St., Olathe, KS 66061	(913) 608-9727	Johnson	M	10	15
+Warren	5608 Halsey St., Shawnee, KS 66216	(913) 766-6672	Johnson	M	8	10
+Washburn	5401 SW 28th St., Topeka , KS 66614	(785) 288-3868	Shawnee	M	9	14
+Webster	3305 Rockwood Dr., Hutchinson, KS 67502	(620) 259-4091	Reno	M	10	13
+Wedgewood	1055 W. 31st St. N., 67204 Wichita, KS 67204	(316) 831-1103	Sedgwick	M	8	3
+White House	15103 Reeds St., Overland Park, KS 66223	(913) 215-2250	Johnson	M	8	4
+Wildcat	101 E. Moreland Ave. , Salina, KS 67401	(785) 404-2259	Saline	M	7	11
+Willow Creek	2011 Andrews St, Winfield, KS 67156	(620) 301-1448	Cowley	M	7	18
+Willow Park	804 SW Lindenwood Ave., Topeka , KS 66606	(785) 783-8024	Shawnee	W	7	2
+Woodchuck	1706 N. Woodchuck St., Wichita, KS 67212	(316) 358-7974	Sedgwick	M	4	7
+Wren	1005 SW 10th Ave., Topeka, KS 66603	(785) 246-6041	Shawnee	M	10	14

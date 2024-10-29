@@ -188,11 +188,11 @@ async function loadCSV() {
 // Function to parse CSV text into an array of objects
 function parseCSV(csvText) {
   const lines = csvText.trim().split('\n');
-  const headers = lines[0].split(',');
+  const headers = lines[0].split('\t');  // Use tab as delimiter
   const rows = lines.slice(1);
 
   return rows.map((line) => {
-    const values = line.split(',');
+    const values = line.split('\t');  // Use tab as delimiter
     const entry = {};
     headers.forEach((header, index) => {
       entry[header.trim()] = values[index].trim();
@@ -200,7 +200,6 @@ function parseCSV(csvText) {
     return entry;
   });
 }
-
 // Function to populate the table with data
 function populateTable(data) {
   const tableBody = document.querySelector('#phone-table tbody');
@@ -229,7 +228,7 @@ function populateFilterOptions(data) {
     selectElement.id = `${category.toLowerCase()}-filter`;
     selectElement.innerHTML = `
       <option value="All">All</option>
-      ${[...new Set(data.map((entry) => entry[category]))].sort().map((option) => `<option value="${option}">${option}</option>`).join('')}
+      ${[...[...new Set(data.map((entry) => entry[category]))].filter((item) => isNaN(item)).sort((a, b) => a.localeCompare(b)), ...[...new Set(data.map((entry) => entry[category]))].filter((item) => !isNaN(item)).sort((a, b) => a - b)].map((option) => `<option value="${option}">${option}</option>`).join('')}
     `;
     filterOptions.appendChild(selectElement);
   });
