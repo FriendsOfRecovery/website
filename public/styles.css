@@ -699,6 +699,9 @@ h1, h2, h3 {
   .oxford-phone th {
     background-color: #f4f4f4;
   }
+  .oxford-phone .filter-container {
+    margin-bottom: 10px;
+  }
   
   /* Media queries */
   @media (max-width: 768px) {

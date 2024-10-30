@@ -55,34 +55,49 @@ function populateTable(data) {
   });
 }
 
-// Function to populate the filter options
+// Function to populate the filter options with labels
 function populateFilterOptions(data) {
-  const filterOptions = document.getElementById('filter-options');
-  const categories = ['County', 'Gender', 'Beds', 'Chapter'];
-
-  categories.forEach((category) => {
-    const selectElement = document.createElement('select');
-    selectElement.id = `${category.toLowerCase()}-filter`;
-    selectElement.innerHTML = `
-      <option value="All">All</option>
-      ${[...[...new Set(data.map((entry) => entry[category]))].filter((item) => isNaN(item)).sort((a, b) => a.localeCompare(b)), ...[...new Set(data.map((entry) => entry[category]))].filter((item) => !isNaN(item)).sort((a, b) => a - b)].map((option) => `<option value="${option}">${option}</option>`).join('')}
-    `;
-    filterOptions.appendChild(selectElement);
-  });
-}
-
+    const filterOptions = document.getElementById('filter-options');
+    const categories = ['County', 'Gender', 'Beds', 'Chapter', 'Re-entry'];
+  
+    categories.forEach((category) => {
+      // Create label element
+      const labelElement = document.createElement('label');
+      labelElement.htmlFor = `${category.toLowerCase()}-filter`;
+      labelElement.textContent = `${category}: `;
+  
+      // Create select element
+      const selectElement = document.createElement('select');
+      selectElement.id = `${category.toLowerCase()}-filter`;
+      selectElement.innerHTML = `
+        <option value="All">All</option>
+        ${[...[...new Set(data.map((entry) => entry[category]))]
+          .filter((item) => isNaN(item))
+          .sort((a, b) => a.localeCompare(b)), 
+        ...[...new Set(data.map((entry) => entry[category]))]
+          .filter((item) => !isNaN(item))
+          .sort((a, b) => a - b)]
+        .map((option) => `<option value="${option}">${option}</option>`).join('')}
+      `;
+  
+      // Append the label and select elements to the filter options container
+      filterOptions.appendChild(labelElement);
+      filterOptions.appendChild(selectElement);
+    });
+  }
+  
 // Function to add filter functionality
 function addFilterFunctionality(data) {
-  const filterOptions = document.getElementById('filter-options');
-  const filterSelects = Array.from(filterOptions.children);
-
-  filterSelects.forEach((select) => {
-    select.addEventListener('change', () => {
-      currentPage = 1; // Reset to first page
-      updateTable(data);
+    const filterOptions = document.getElementById('filter-options');
+    const filterSelects = Array.from(filterOptions.querySelectorAll('select')); // Only selects, ignore labels
+  
+    filterSelects.forEach((select) => {
+      select.addEventListener('change', () => {
+        currentPage = 1; // Reset to first page
+        updateTable(data);
+      });
     });
-  });
-}
+  }
 
 // Function to add search functionality
 function addSearchFunctionality(data) {
@@ -119,22 +134,23 @@ function addPaginationFunctionality(data) {
 
 // Function to update the table based on filters, search, and pagination
 function updateTable(data) {
-  const filterValues = Array.from(document.getElementById('filter-options').children).map((select) => select.value);
-  const searchTerm = document.getElementById('search-input').value.toLowerCase();
-
-  const filteredData = data.filter((entry) => {
-    const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter'].every((category, index) => {
-      const filterValue = filterValues[index];
-      return filterValue === 'All' || entry[category] === filterValue;
+    const filterSelects = Array.from(document.getElementById('filter-options').querySelectorAll('select'));
+    const filterValues = filterSelects.map((select) => select.value);
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+  
+    const filteredData = data.filter((entry) => {
+      const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter', 'Re-entry'].every((category, index) => {
+        const filterValue = filterValues[index];
+        return filterValue === 'All' || entry[category] === filterValue;
+      });
+      const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchTerm));
+      return matchesFilters && matchesSearch;
     });
-    const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchTerm));
-    return matchesFilters && matchesSearch;
-  });
-
-  totalPages = Math.ceil(filteredData.length / itemsPerPage); // Update total pages
-  populateTable(filteredData);
-  updatePaginationControls();
-}
+  
+    totalPages = Math.ceil(filteredData.length / itemsPerPage); // Update total pages
+    populateTable(filteredData);
+    updatePaginationControls();
+  }
 
 // Function to update pagination controls
 function updatePaginationControls() {
