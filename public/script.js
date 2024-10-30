@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Next/previous controls
+// Next/previous slide controls
 function plusSlides(n) {
   clearInterval(autoSlideInterval); // Pause auto slideshow when user interacts
   showSlides(slideIndex += n);

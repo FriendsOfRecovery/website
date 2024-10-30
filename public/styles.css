@@ -656,48 +656,56 @@ h1, h2, h3 {
 .oxford-phone {
     font-family: Arial, sans-serif;
     padding: 20px;
-  }
-  
-  .oxford-phone h1 {
+}
+
+.oxford-phone h1 {
     text-align: center;
-  }
-  
-  .oxford-phone .controls {
-    margin-bottom: 20px;
+}
+
+.oxford-phone .controls {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.oxford-phone #search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.oxford-phone #filter-options {
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-  }
-  
-  .oxford-phone #search-input {
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .oxford-phone #category-filter {
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .oxford-phone table {
+    justify-content: center;
+}
+
+.oxford-phone .filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.oxford-phone table {
     width: 100%;
     border-collapse: collapse;
     margin: auto;
-  }
-  
-  .oxford-phone th, .oxford-phone td {
+}
+
+.oxford-phone th, .oxford-phone td {
     padding: 8px 12px;
     border: 1px solid #ddd;
     text-align: left;
-  }
-  
-  .oxford-phone th {
+}
+
+.oxford-phone th {
     background-color: #f4f4f4;
-  }
-  .oxford-phone .filter-container {
-    margin-bottom: 10px;
-  }
-  
+}  
   /* Media queries */
   @media (max-width: 768px) {
     .oxford-phone {
@@ -722,3 +730,82 @@ h1, h2, h3 {
       padding: 6px 8px;
     }
   }
+
+/*pop up*/
+/* Popup overlay style */
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 20%;
+    top: 10%;
+    width: 100%;
+    height: 95vh;
+    overflow-y: auto; /* Enable vertical scrolling within the popup if needed *//* Prevent body scrolling */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Popup content styling */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 95vh; /* Limit height to 80% of viewport height */
+    overflow-y: auto; /* Enable vertical scrolling within the popup if needed */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close button styling */
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* House image styling */
+#house-image {
+    max-height: 300px;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 15px;
+        width: 95%;
+    }
+    #house-image {
+        max-width: 100%; /* Allow image to be full width on small screens */
+    }
+    .close-button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 10px;
+    }
+    .close-button {
+        font-size: 18px;
+    }
+}
