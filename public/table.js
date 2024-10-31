@@ -50,6 +50,8 @@ function populateTable(data) {
 
     Object.keys(entry).forEach((key) => {
       const cell = document.createElement('td');
+      cell.setAttribute('data-label', key); // Add data-label for responsive view
+
       if (key === 'Name') {
         const link = document.createElement('a');
         link.href = '#';
