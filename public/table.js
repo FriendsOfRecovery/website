@@ -10,11 +10,7 @@ async function loadCSV() {
     if (!response.ok) throw new Error('Network response was not ok');
     const csvText = await response.text();
     data = parseCSV(csvText);
-    populateFilterOptions(data);
-    addFilterFunctionality(data);
-    addSearchFunctionality(data);
-    addPaginationFunctionality(data);
-    updateTable(data); // Initial table population
+    initializeTable(data);
   } catch (error) {
     console.error('Error loading CSV file:', error);
   }
@@ -36,45 +32,67 @@ function parseCSV(csvText) {
   });
 }
 
+// Function to initialize the table and functionalities
+function initializeTable(data) {
+  populateFilterOptions(data);
+  addFilterFunctionality(data);
+  addSearchFunctionality(data);
+  addPaginationFunctionality(data);
+  updateTable(data); // Initial table population
+}
+
 // Function to populate the table with data based on pagination
 function populateTable(data) {
   const tableBody = document.querySelector('#phone-table tbody');
   tableBody.innerHTML = ''; // Clear existing rows
 
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const paginatedData = data.slice(start, end);
+  const paginatedData = getPaginatedData(data);
 
   paginatedData.forEach((entry) => {
     const row = document.createElement('tr');
-
     Object.keys(entry).forEach((key) => {
       const cell = document.createElement('td');
       cell.setAttribute('data-label', key); // Add data-label for responsive view
-
-      if (key === 'Name') {
-        const link = document.createElement('a');
-        link.href = '#';
-        link.textContent = entry[key];
-        link.addEventListener('click', () => showHouseDetails(entry));
-        cell.appendChild(link);
-      } else {
-        cell.textContent = entry[key];
-      }
+      cell.appendChild(createCellContent(key, entry));
       row.appendChild(cell);
     });
-
     tableBody.appendChild(row);
   });
 }
 
+function getPaginatedData(data) {
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return data.slice(start, end);
+}
+
+function createCellContent(key, entry) {
+  if (key === 'Name') {
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = entry[key];
+    link.addEventListener('click', () => showHouseDetails(entry));
+    return link;
+  } else {
+    const textNode = document.createTextNode(entry[key]);
+    return textNode;
+  }
+}
+
 // Function to update the table based on filters, search, and pagination
 function updateTable(data) {
+  const filteredData = filterData(data);
+  totalPages = Math.ceil(filteredData.length / itemsPerPage); // Update total pages
+  populateTable(filteredData);
+  updatePaginationControls();
+}
+
+function filterData(data) {
   const filterSelects = Array.from(document.getElementById('filter-options').querySelectorAll('select'));
   const filterValues = filterSelects.map((select) => select.value);
   const searchTerm = document.getElementById('search-input').value.toLowerCase();
 
-  const filteredData = data.filter((entry) => {
+  return data.filter((entry) => {
     const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter', 'Re-entry'].every((category, index) => {
       const filterValue = filterValues[index];
       return filterValue === 'All' || entry[category] === filterValue;
@@ -82,10 +100,6 @@ function updateTable(data) {
     const matchesSearch = Object.values(entry).some((value) => value.toLowerCase().includes(searchTerm));
     return matchesFilters && matchesSearch;
   });
-
-  totalPages = Math.ceil(filteredData.length / itemsPerPage); // Update total pages
-  populateTable(filteredData);
-  updatePaginationControls();
 }
 
 // Function to update pagination controls
@@ -95,27 +109,24 @@ function updatePaginationControls() {
   document.getElementById('next-button').disabled = currentPage === totalPages;
 }
 
-// Function to show house details in a popup// Function to show house details in a popup
+// Function to show house details in a popup
 function showHouseDetails(entry) {
-    const popup = document.getElementById('house-popup');
-    const houseName = document.getElementById('house-name');
-    const houseDetails = document.getElementById('house-details');
-    const houseImage = document.getElementById('house-image');
-  
-    houseName.textContent = entry.Name;
-    // Replace spaces with underscores for the image filename
-    houseImage.src = `assets/houses/${entry.Name.toLowerCase().replace(/ /g, '_')}.jpg`;
-  
-    let details = '';
-    for (const [key, value] of Object.entries(entry)) {
-      if (key !== 'Name') {
-        details += `<strong>${key}:</strong> ${value}<br>`;
-      }
-    }
-    houseDetails.innerHTML = details;
-  
-    popup.style.display = 'block';
-  }
+  const popup = document.getElementById('house-popup');
+  const houseName = document.getElementById('house-name');
+  const houseDetails = document.getElementById('house-details');
+  const houseImage = document.getElementById('house-image');
+
+  houseName.textContent = entry.Name;
+  // Replace spaces with underscores for the image filename
+  houseImage.src = `assets/houses/${entry.Name.toLowerCase().replace(/ /g, '_')}.jpg`;
+
+  houseDetails.innerHTML = Object.entries(entry)
+    .filter(([key]) => key !== 'Name')
+    .map(([key, value]) => `<strong>${key}:</strong> ${value}<br>`)
+    .join('');
+
+  popup.style.display = 'block';
+}
 
 // Close the popup when the close button is clicked
 document.querySelector('.close-button').addEventListener('click', () => {
@@ -148,13 +159,20 @@ function populateFilterOptions(data) {
     selectElement.id = `${category.toLowerCase()}-filter`;
     selectElement.innerHTML = `
       <option value="All">All</option>
-      ${[...[...new Set(data.map((entry) => entry[category]))].filter((item) => isNaN(item)).sort((a, b) => a.localeCompare(b)), ...[...new Set(data.map((entry) => entry[category]))].filter((item) => !isNaN(item)).sort((a, b) => a - b)].map((option) => `<option value="${option}">${option}</option>`).join('')}
+      ${getUniqueSortedOptions(data, category).map((option) => `<option value="${option}">${option}</option>`).join('')}
     `;
 
     container.appendChild(labelElement);
     container.appendChild(selectElement);
     filterOptions.appendChild(container);
   });
+}
+
+function getUniqueSortedOptions(data, category) {
+  const options = [...new Set(data.map((entry) => entry[category]))];
+  const nonNumericOptions = options.filter((item) => isNaN(item)).sort((a, b) => a.localeCompare(b));
+  const numericOptions = options.filter((item) => !isNaN(item)).sort((a, b) => a - b);
+  return [...nonNumericOptions, ...numericOptions];
 }
 
 // Function to add filter functionality
