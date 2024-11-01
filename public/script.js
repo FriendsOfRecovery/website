@@ -145,7 +145,7 @@ function adjustButtonPosition() {
   if (!donateButton || !footer) return; // Exit if button or footer isn't available
 
   // Initial display check to hide on specific pages or mobile view
-  if (document.title === 'Oxford Phone List' || document.title === "Q&A - F.O.R.A." || document.title === "About - F.O.R.A." || window.innerWidth <= 768) {
+  if (document.title === 'Oxford House Phone List - Kansas Sober Living' || document.title === "Frequently Asked Questions (FAQ) - Friends of Recovery Association" || document.title === "About - F.O.R.A." || window.innerWidth <= 768) {
       donateButton.style.display = 'none';
       return;
   } else {
