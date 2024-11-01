@@ -12,7 +12,8 @@ async function loadCSV() {
     data = parseCSV(csvText);
     initializeTable(data);
   } catch (error) {
-    console.error('Error loading CSV file:', error);
+    console.error('Error loading CSV file:', error.message); // Only log the error message
+    alert('An error occurred while loading the data. Please try again later.'); // User-friendly message
   }
 }
 
@@ -26,7 +27,14 @@ function parseCSV(csvText) {
     const values = line.split('\t');  // Use tab as delimiter
     const entry = {};
     headers.forEach((header, index) => {
-      entry[header.trim()] = values[index].trim();
+      let sanitizedValue = values[index].trim();
+
+      // Escape potentially dangerous characters
+      if (sanitizedValue.startsWith('=') || sanitizedValue.startsWith('+') || sanitizedValue.startsWith('-') || sanitizedValue.startsWith('@')) {
+        sanitizedValue = `'${sanitizedValue}`;
+      }
+
+      entry[header.trim()] = sanitizedValue;
     });
     return entry;
   });
@@ -67,16 +75,9 @@ function getPaginatedData(data) {
 }
 
 function createCellContent(key, entry) {
-  if (key === 'Name') {
-    const link = document.createElement('a');
-    link.href = '#';
-    link.textContent = entry[key];
-    link.addEventListener('click', () => showHouseDetails(entry));
-    return link;
-  } else {
-    const textNode = document.createTextNode(entry[key]);
-    return textNode;
-  }
+  const cellContent = document.createElement('span');
+  cellContent.textContent = entry[key]; // Use textContent to avoid XSS
+  return cellContent;
 }
 
 // Function to update the table based on filters, search, and pagination
@@ -87,10 +88,20 @@ function updateTable(data) {
   updatePaginationControls();
 }
 
+function sanitizeInput(input) {
+  const div = document.createElement('div');
+  div.textContent = input;
+  return div.innerHTML;
+}
+
+function getFilterValues() {
+  return Array.from(document.getElementById('filter-options').querySelectorAll('select'))
+    .map((select) => sanitizeInput(select.value));
+}
+
 function filterData(data) {
-  const filterSelects = Array.from(document.getElementById('filter-options').querySelectorAll('select'));
-  const filterValues = filterSelects.map((select) => select.value);
-  const searchTerm = document.getElementById('search-input').value.toLowerCase();
+  const filterValues = getFilterValues();
+  const searchTerm = sanitizeInput(document.getElementById('search-input').value.toLowerCase());
 
   return data.filter((entry) => {
     const matchesFilters = ['County', 'Gender', 'Beds', 'Chapter', 'Re-entry'].every((category, index) => {

@@ -1,20 +1,22 @@
-<footer class="container">
-    <p>&copy; 2024 F.O.R.A. All rights reserved.</p>
-        <p>F.O.R.A. is a 501(c)(3) not-for-profit organization.
-    </p>
-    <a href="https://friendsofrecovery.harnessgiving.org/donate" class="floating-donate-button" target="_blank" aria-label="Donate to Friends of Recovery Association">
+<footer class="container" itemscope itemtype="http://schema.org/NonProfitOrganization">
+    <p itemprop="copyrightHolder">&copy; 2024 F.O.R.A. All rights reserved.</p>
+    <p itemprop="description">F.O.R.A. is a 501(c)(3) not-for-profit organization.</p>
+    <a href="https://friendsofrecovery.harnessgiving.org/donate" class="floating-donate-button" target="_blank" itemprop="donation" aria-label="Donate to Friends of Recovery Association">
         <i class="fas fa-donate"></i> Donate</a>
-    <p></p>
+    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">6422 Santa Fe Drive</span>
+        <span itemprop="addressLocality">Overland Park</span>, <span itemprop="addressRegion">KS</span> <span itemprop="postalCode">66202</span>
+    </p>
     
     <!-- Social Media Links -->
     <div class="social-media">
-        <a href="https://www.youtube.com/YourChannel" target="_blank" aria-label="YouTube">
+        <a href="https://www.youtube.com/YourChannel" target="_blank" itemprop="sameAs" aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
         </a>
-        <a href="https://www.instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/YourProfile" target="_blank" itemprop="sameAs" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
         </a>
-        <a href="https://www.facebook.com/FriendsofRecoveryKS/" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/FriendsofRecoveryKS/" target="_blank" itemprop="sameAs" aria-label="Facebook">
             <i class="fa-brands fa-facebook"></i>
         </a>
     </div>
