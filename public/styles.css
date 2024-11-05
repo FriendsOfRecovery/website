@@ -866,3 +866,52 @@ h1, h2, h3 {
         font-size: 18px;
     }
 }
+
+/* Get Involved Page Layout */
+.get-involved-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0, 141, 187, 0.1), rgba(0, 141, 187, 0.2));
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.get-involved-hero h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.get-involved-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.main-content {
+    padding-right: 40px;
+    border-right: 1px solid #eee;
+}
+
+.sidebar-content {
+    position: sticky;
+    top: 20px;
+}
+
+.quick-contact {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    color: #008DBB;
+    text-decoration: none
+}

@@ -37,18 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlides(slideIndex);
   autoShowSlides(); // Start auto slideshow
 
-  // Add event listeners to toggle bio buttons once page is fully loaded
+  // Update bio toggle functionality
   const toggleButtons = document.querySelectorAll('.toggle-bio');
   toggleButtons.forEach(button => {
+      const staffMember = button.closest('.staff-member');
+      const bioContent = button.nextElementSibling;
+      const staffImage = staffMember.querySelector('.staff-image');
+      
+      // Initially hide bio content and image
+      bioContent.style.display = 'none';
+      staffImage.style.display = 'none';
+      
       button.addEventListener('click', () => {
-          const bioContent = button.nextElementSibling;
-          if (bioContent.style.display === 'block') {
-              bioContent.style.display = 'none';
-              button.textContent = 'View Bio';
-          } else {
-              bioContent.style.display = 'block';
-              button.textContent = 'Hide Bio';
-          }
+          const isVisible = bioContent.style.display === 'block';
+          bioContent.style.display = isVisible ? 'none' : 'block';
+          staffImage.style.display = isVisible ? 'none' : 'block';
+          button.textContent = isVisible ? 'View Bio' : 'Hide Bio';
       });
   });
 });
