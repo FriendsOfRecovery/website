@@ -65,68 +65,6 @@
     cursor: pointer;
 }
 
-/* Responsive Table Styles */
-@media (max-width: 768px) {
-    .oxford-phone {
-        padding: 10px;
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-
-    .controls {
-        flex-direction: column;
-    }
-
-    #search-input {
-        width: 100%;
-    }
-
-    /* Stack table into cards */
-    #phone-table,
-    #phone-table thead,
-    #phone-table tbody,
-    #phone-table th,
-    #phone-table td,
-    #phone-table tr {
-        display: block;
-    }
-
-    #phone-table thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    #phone-table tr {
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    #phone-table td {
-        position: relative;
-        padding: 12px 10px 12px 50%;
-        border: none;
-        border-bottom: 1px solid #eee;
-    }
-
-    #phone-table td:last-child {
-        border-bottom: none;
-    }
-
-    #phone-table td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 12px;
-        width: 45%;
-        padding-right: 10px;
-        font-weight: bold;
-        color: #666;
-    }
-}
-
 /* Pagination Styles */
 #pagination {
     display: flex;
@@ -179,7 +117,7 @@
     width: 80%;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .close-button {
@@ -209,24 +147,22 @@
     color: #666;
 }
 
-/* Clickable row styling */
-#phone-table tbody tr td:first-child {
-    color: #008DBB;
-    position: relative;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
 
-#phone-table tbody tr td:first-child::after {
-    content: '🏠';
-    margin-left: 5px;
-    font-size: 0.9em;
-    opacity: 0.7;
-}
+    #search-input {
+        width: 100%;
+    }
 
-#phone-table tbody tr:hover td:first-child {
-    color: #5F07B3;
-}
+    .popup-content {
+        width: 90%;
+        margin: 20% auto;
+    }
 
-/* Ensure the table header doesn't show the house icon */
-#phone-table thead tr th:first-child::after {
-    content: none;
+    #pagination {
+        flex-wrap: wrap;
+    }
 } 
