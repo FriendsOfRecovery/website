@@ -249,3 +249,18 @@ document.head.appendChild(style);
 
 // Call loadCSV when the page loads
 document.addEventListener('DOMContentLoaded', loadCSV);
+
+function showLoading() {
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'loading-overlay';
+    loadingDiv.innerHTML = `
+        <div class="loading-spinner"></div>
+        <p>Loading data...</p>
+    `;
+    document.body.appendChild(loadingDiv);
+}
+
+function hideLoading() {
+    const loadingDiv = document.querySelector('.loading-overlay');
+    if (loadingDiv) loadingDiv.remove();
+}

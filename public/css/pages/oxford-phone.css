@@ -107,17 +107,21 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .popup-content {
     position: relative;
     background-color: white;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 20px;
     width: 80%;
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .close-button {
@@ -165,4 +169,42 @@
     #pagination {
         flex-wrap: wrap;
     }
+
+    .oxford-phone table {
+        min-width: unset;
+    }
+
+    .oxford-phone td {
+        display: grid;
+        grid-template-columns: 35% 65%;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .oxford-phone td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .oxford-phone tr {
+        margin-bottom: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+    }
+}
+
+/* Prevent background scrolling when popup is open */
+html.popup-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Enable popup scrolling */
+.popup {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 } 
