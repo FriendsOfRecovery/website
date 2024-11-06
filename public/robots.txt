@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /about-oh
+Allow: /about-fora
+Allow: /contact
+Allow: /get-involved
+Allow: /oxford-phone
+Allow: /qanda
+
 Disallow: /css/
 Disallow: /js/
 Disallow: /assets/
