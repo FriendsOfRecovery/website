@@ -1,0 +1,167 @@
+/* Base Responsive Design */
+@media (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header/Navigation */
+    header.container {
+        position: relative;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+        order: 1;
+        font-size: 24px;
+        color: white;
+        z-index: 1000;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #5F07B3;
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        animation: slideIn 0.3s forwards;
+        margin: 21px;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Footer adjustments */
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Common grid layouts */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    /* Common flex layouts */
+    .flex-container {
+        flex-direction: column;
+    }
+
+    /* Image responsiveness */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Table responsiveness */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+/* Index Page Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+    
+    .locations-container {
+        flex-direction: column;
+    }
+    
+    .office {
+        margin: 10px 0;
+        min-width: 100%;
+    }
+    
+    .prev, .next {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+    }
+}
+
+/* About Page Responsive Styles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-content {
+        margin-right: 0;
+        padding-right: 0;
+    }
+} 

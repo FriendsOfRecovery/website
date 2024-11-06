@@ -1,22 +1,58 @@
 <!-- header.html -->
-<header class="container">
-    <div class="logo">
-        <a href="/">
-            <img src="assets/fora.jpg" alt="Friends of Recovery Association Logo" title="Friends of Recovery Association">  
-        </a>
-    </div>
-    <nav>
-        <div class="menu-icon">
-            &#9776;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/components/modal.css">
+    <link rel="stylesheet" href="/css/components/responsive.css">
+    <!-- Page Specific CSS -->
+    <script>
+        // Dynamically add page-specific CSS
+        const pageName = window.location.pathname.split('/').pop().replace('.html', '');
+        if (pageName) {
+            const pageCSS = document.createElement('link');
+            pageCSS.rel = 'stylesheet';
+            pageCSS.href = `/css/pages/${pageName}.css`;
+            document.head.appendChild(pageCSS);
+            
+            // Handle special cases for about pages
+            if (pageName === 'about-fora' || pageName === 'about-oh') {
+                const aboutCSS = document.createElement('link');
+                aboutCSS.rel = 'stylesheet';
+                aboutCSS.href = '/css/pages/about.css';
+                document.head.appendChild(aboutCSS);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="assets/fora.jpg" alt="Friends of Recovery Association Logo" title="Friends of Recovery Association">  
+            </a>
         </div>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" title="About Friends of Recovery Association">About</a></li>
-            <li><a href="qanda.html" title="Frequently Asked Questions about Oxford Houses">Q&A</a></li>
-            <li><a href="get-involved.html" title="Get involved with F.O.R.A. by donating, volunteering, or spreading the word">Get Involved</a></li>
-            <li><a href="contact.html" title="Contact F.O.R.A.">Contact</a></li>
-            <li><a href="oxford-phone.html" title="Oxford House Phone List">Phone List</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <div class="menu-icon">
+                &#9776;
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" title="About Friends of Recovery Association">About</a></li>
+                <li><a href="qanda.html" title="Frequently Asked Questions about Oxford Houses">Q&A</a></li>
+                <li><a href="get-involved.html" title="Get involved with F.O.R.A. by donating, volunteering, or spreading the word">Get Involved</a></li>
+                <li><a href="contact.html" title="Contact F.O.R.A.">Contact</a></li>
+                <li><a href="oxford-phone.html" title="Oxford House Phone List">Phone List</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
     

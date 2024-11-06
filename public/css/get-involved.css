@@ -1,0 +1,278 @@
+/* Basic Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+a {
+    color: #008DBB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+}
+
+/* Container Class */
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Get Involved Page Layout */
+.get-involved-hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.get-involved-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Stats Section */
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #5F07B3;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #008DBB;
+    margin: 10px 0;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Quick Contact Section */
+.quick-contact {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #5F07B3;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #008DBB;
+    transform: translateY(-2px);
+}
+
+/* Events Section */
+.events-section {
+    margin-top: 40px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;    
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card i {
+    font-size: 2rem;
+    color: #5F07B3;
+    margin-bottom: 15px;
+}
+
+/* Floating Donate Button */
+.floating-donate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #008DBB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.floating-donate-button:hover {
+    background-color: #006d91;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .get-involved-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .get-involved-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Board Membership Styles */
+.board-membership-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.board-membership-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.board-membership-card .card-header i {
+    font-size: 2rem;
+    color: #5F07B3;
+}
+
+.board-membership-card h4 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+}
+
+.board-opportunities {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opportunity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.opportunity-item:hover {
+    transform: translateX(5px);
+    background: #f0f2f5;
+}
+
+.opportunity-item i {
+    color: #008DBB;
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.opportunity-item span {
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.board-cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #5F07B3;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.board-cta-button:hover {
+    background: #008DBB;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.board-cta-button i {
+    transition: transform 0.3s ease;
+} 

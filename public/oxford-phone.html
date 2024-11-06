@@ -5,68 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Oxford House phone list for Kansas, including sober living houses for men and women.">
     <meta name="keywords" content="Oxford House, sober living, Kansas, phone list, recovery, addiction, men, women, children">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <title>Oxford House Phone List - Kansas Sober Living</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/components/modal.css">
+    <link rel="stylesheet" href="/css/components/responsive.css">
+    <link rel="stylesheet" href="/css/pages/oxford-phone.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+<body>
     <!-- Header -->
     <header id="main-header">
-      <!-- Header content will be loaded here -->
-  </header>
-  <body class="oxford-phone">
-  <h1>Oxford House Phone List - Kansas Sober Living</h1>
+        <!-- Header content will be loaded dynamically -->
+    </header>
 
-  <div class="controls">
-    <input type="text" id="search-input" placeholder="Search by name...">
-    <div id="filter-options"></div> 
-  </div>
+    <!-- Main Content -->
+    <main>
+        <div class="oxford-phone">
+            <h1>Oxford House Phone List - Kansas Sober Living</h1>
 
-  <table id="phone-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Phone Number</th>
-        <th>County</th>
-        <th>Gender</th>
-        <th>Beds</th>
-        <th>Chapter</th>
-        <th>Re-entry</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Table rows will be populated here -->
-    </tbody>
-  </table>
+            <div class="controls">
+                <input type="text" id="search-input" placeholder="Search by name...">
+                <div id="filter-options"></div> 
+            </div>
 
-  <div id="pagination">
-    <button id="prev-button">Previous</button>
-    <span id="page-info">Page 1 of 1</span>
-    <button id="next-button">Next</button>
-    <label for="items-per-page">Items per page:</label>
-    <select id="items-per-page">
-      <option value="10">10</option>
-      <option value="20">20</option>
-      <option value="50">50</option>
-    </select>
-    <span style="font-size: 12px"><strong><i>Men with Children | WC - Women with Children | M - Mixed</i></strong></span>
-  </div>
-  <div id="house-popup" class="popup">
-    <div class="popup-content">
-      <span class="close-button">&times;</span>
-      <img id="house-image" src="" alt="House Image">
-      <h2 id="house-name"></h2>
-      <p id="house-details"></p>
-    </div>
-  </div>
+            <div class="table-container">
+                <table id="phone-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>County</th>
+                            <th>Gender</th>
+                            <th>Beds</th>
+                            <th>Chapter</th>
+                            <th>Re-entry</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
 
-  <script src="script.js"></script>
-  <script src="table.js"></script>
-      <!-- Footer -->
-      <footer id="main-footer">
-        <!-- Footer content will be loaded here -->
+            <div id="pagination">
+                <button id="prev-button">Previous</button>
+                <span id="page-info">Page 1 of 1</span>
+                <button id="next-button">Next</button>
+                <label for="items-per-page">Items per page:</label>
+                <select id="items-per-page">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+                <span style="font-size: 12px"><strong><i>Men with Children | WC - Women with Children | M - Mixed</i></strong></span>
+            </div>
+        </div>
+
+        <!-- House Popup -->
+        <div id="house-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <img id="house-image" src="" alt="House Image">
+                <h2 id="house-name"></h2>
+                <p id="house-details"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <!-- Footer content will be loaded dynamically -->
     </footer>
+
+    <a href="https://friendsofrecovery.harnessgiving.org/campaigns/16482" class="floating-donate-button">
+        <i class="fas fa-donate"></i> Donate
+    </a>
+
+    <script type="module" src="script.js"></script>
+    <script src="js/table.js"></script>
 </body>
 </html>
 

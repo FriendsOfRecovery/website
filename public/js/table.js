@@ -58,9 +58,11 @@ function populateTable(data) {
 
   paginatedData.forEach((entry) => {
     const row = document.createElement('tr');
+    row.addEventListener('click', () => showHouseDetails(entry)); // Add click event
+    
     Object.keys(entry).forEach((key) => {
       const cell = document.createElement('td');
-      cell.setAttribute('data-label', key); // Add data-label for responsive view
+      cell.setAttribute('data-label', key);
       cell.appendChild(createCellContent(key, entry));
       row.appendChild(cell);
     });
@@ -122,33 +124,46 @@ function updatePaginationControls() {
 
 // Function to show house details in a popup
 function showHouseDetails(entry) {
-  const popup = document.getElementById('house-popup');
-  const houseName = document.getElementById('house-name');
-  const houseDetails = document.getElementById('house-details');
-  const houseImage = document.getElementById('house-image');
+    const popup = document.getElementById('house-popup');
+    const houseName = document.getElementById('house-name');
+    const houseDetails = document.getElementById('house-details');
+    const houseImage = document.getElementById('house-image');
 
-  houseName.textContent = entry.Name;
-  // Replace spaces with underscores for the image filename
-  houseImage.src = `assets/houses/${entry.Name.toLowerCase().replace(/ /g, '_')}.jpg`;
+    if (!entry) return; // Don't show popup if no entry is provided
 
-  houseDetails.innerHTML = Object.entries(entry)
-    .filter(([key]) => key !== 'Name')
-    .map(([key, value]) => `<strong>${key}:</strong> ${value}<br>`)
-    .join('');
+    houseName.textContent = entry.Name;
+    // Replace spaces with underscores for the image filename
+    const imageName = entry.Name.toLowerCase().replace(/ /g, '_');
+    houseImage.src = `assets/houses/${imageName}.jpg`;
+    houseImage.onerror = () => {
+        houseImage.src = 'assets/houses/default-house.jpg'; // Fallback image
+    };
 
-  popup.style.display = 'block';
+    houseDetails.innerHTML = Object.entries(entry)
+        .filter(([key]) => key !== 'Name')
+        .map(([key, value]) => `<strong>${key}:</strong> ${value}<br>`)
+        .join('');
+
+    popup.style.display = 'block';
 }
 
 // Close the popup when the close button is clicked
-document.querySelector('.close-button').addEventListener('click', () => {
-  document.getElementById('house-popup').style.display = 'none';
+document.querySelector('.close-button')?.addEventListener('click', () => {
+    document.getElementById('house-popup').style.display = 'none';
 });
 
 // Close the popup when clicking outside the popup content
 window.addEventListener('click', (event) => {
-  if (event.target === document.getElementById('house-popup')) {
-    document.getElementById('house-popup').style.display = 'none';
-  }
+    const popup = document.getElementById('house-popup');
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
+});
+
+// Remove any initial popup display
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('house-popup');
+    if (popup) popup.style.display = 'none';
 });
 
 // Function to populate filter options dynamically
@@ -219,6 +234,18 @@ function addPaginationFunctionality(data) {
     updateTable(data);
   });
 }
+
+// Make rows clickable with cursor pointer
+const style = document.createElement('style');
+style.textContent = `
+    #phone-table tbody tr {
+        cursor: pointer;
+    }
+    #phone-table tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+`;
+document.head.appendChild(style);
 
 // Call loadCSV when the page loads
 document.addEventListener('DOMContentLoaded', loadCSV);

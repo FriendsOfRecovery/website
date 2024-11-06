@@ -1,0 +1,90 @@
+/* Common Button Styles */
+.button, .btn {
+    background-color: #008DBB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .btn:hover {
+    background-color: #005f80;
+    color: white;
+}
+
+/* Floating Donate Button */
+.floating-donate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #008DBB;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: bottom 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-donate-button:hover {
+    background-color: #006d91;
+    color: white;
+    text-decoration: none;
+}
+
+.floating-donate-button i {
+    font-size: 1.1em;
+}
+
+/* Bio Toggle Button */
+.toggle-bio {
+    background: #008DBB;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-bio:hover {
+    background: #005f80;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(95, 7, 179, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body.has-dense-content .floating-donate-button {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .floating-donate-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        bottom: 20px;
+        right: 20px;
+    }
+} 

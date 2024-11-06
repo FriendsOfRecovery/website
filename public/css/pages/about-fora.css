@@ -1,0 +1,257 @@
+/* FORA About Page Specific Styles */
+.fora-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fora-hero {
+    background: linear-gradient(90deg, #5F07B3, #008DBB);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.fora-hero h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mission-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.mission-section h2 {
+    color: #5F07B3;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.value-card i {
+    font-size: 2.5em;
+    color: #5F07B3;
+    margin-bottom: 15px;
+}
+
+/* Staff and Team Sections */
+.about-page {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-page__main {
+    flex: 1;
+}
+
+.about-page__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Outreach Section */
+.outreach-section {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.outreach-section h2 {
+    margin-bottom: 1.5rem;
+    color: #5F07B3;
+}
+
+.outreach-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.outreach-scroll {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.outreach-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Outreach Member Styles */
+.outreach-member {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-width: 300px;
+}
+
+.outreach-member:hover {
+    transform: translateY(-5px);
+}
+
+.outreach-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #5F07B3;
+    margin-bottom: 15px;
+}
+
+/* Outreach Navigation Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(95, 7, 179, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-btn:hover {
+    background: rgba(95, 7, 179, 1);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .fora-hero {
+        padding: 40px 20px;
+    }
+    
+    .mission-section {
+        padding: 25px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .outreach-container {
+        padding: 0;
+    }
+    
+    .outreach-scroll {
+        overflow-x: auto;
+        padding: 20px;
+    }
+}
+
+/* Staff and Bio Styles */
+.staff-member {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+}
+
+.staff-image {
+    width: 100%;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Chairman Section */
+.chairman-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.chairman-section img {
+    margin-bottom: 15px;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+}
+
+/* Added new styles for modal image */
+.modal-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+}
+
+/* Added for better text layout */
+.bio-text {
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Hide bio content on main page */
+.bio-content {
+    display: none;
+}

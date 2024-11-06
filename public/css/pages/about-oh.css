@@ -1,0 +1,123 @@
+/* Oxford House About Page Specific Styles */
+.oxford-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.oxford-hero {
+    background: linear-gradient(90deg, #5F07B3, #008DBB);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.oxford-hero h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.oxford-hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.oxford-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+#about-oxford-house {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about-oxford-house h1,
+#about-oxford-house h2 {
+    color: #5F07B3;
+    margin: 1.5rem 0 1rem;
+}
+
+#about-oxford-house ul,
+#about-oxford-house ol {
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+}
+
+#about-oxford-house li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+#about-oxford-house p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-image {
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.oxford-main {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.oxford-sidebar {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.oxford-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2em;
+    color: #5F07B3;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .oxford-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .oxford-hero {
+        padding: 40px 20px;
+    }
+    
+    .oxford-stats {
+        grid-template-columns: 1fr;
+    }
+} 
