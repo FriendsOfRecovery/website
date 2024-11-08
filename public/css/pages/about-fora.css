@@ -54,21 +54,24 @@
 /* Staff and Team Sections */
 .about-page {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 350px;
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem;
 }
 
 .about-page__main {
-    flex: 1;
+    min-height: 100%;
 }
 
 .about-page__sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-right: 1rem;
 }
 
 /* Outreach Section */
@@ -254,4 +257,52 @@
 /* Hide bio content on main page */
 .bio-content {
     display: none;
+}
+
+.bio-content p {
+    margin-bottom: 1em; /* Add space between paragraphs */
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0; /* Remove margin from last paragraph */
+}
+
+/* Update modal text styles */
+.modal-bio-text p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.modal-bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Staff section adjustments */
+.staff-section {
+    margin-top: 2rem;
+}
+
+.staff-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+/* Make bio content scrollable if too long */
+.bio-content {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page__sidebar {
+        position: static;
+        max-height: none;
+        padding-right: 0;
+    }
 }

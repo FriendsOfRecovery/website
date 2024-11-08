@@ -28,12 +28,22 @@ export function initializeBioModal() {
 
     function showModal(name, content, imgSrc, imgAlt) {
         modalTitle.textContent = name;
+        
+        // Split content into paragraphs and handle line breaks
+        const formattedContent = content
+            .split(/\n+/) // Split on one or more newlines
+            .map(para => para.trim()) // Trim whitespace
+            .filter(para => para) // Remove empty paragraphs
+            .map(para => `<p>${para}</p>`) // Wrap each paragraph in <p> tags
+            .join(''); // Join paragraphs together
+
         modalBioText.innerHTML = `
             <div class="modal-image">
                 <img src="${imgSrc}" alt="${imgAlt}">
             </div>
-            <p>${content}</p>
+            ${formattedContent}
         `;
+        
         bioModal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     }
