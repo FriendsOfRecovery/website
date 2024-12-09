@@ -249,3 +249,35 @@ document.head.appendChild(style);
 
 // Call loadCSV when the page loads
 document.addEventListener('DOMContentLoaded', loadCSV);
+
+function setupPrintButton() {
+    const printButton = document.getElementById('print-button');
+    if (!printButton) return;
+
+    printButton.addEventListener('click', () => {
+        // Get current filtered data
+        const filteredData = filterData(data);
+        
+        // Store current pagination state
+        const currentItemsPerPage = itemsPerPage;
+        const currentPageState = currentPage;
+        
+        // Show all filtered items
+        itemsPerPage = filteredData.length;
+        updateTable(filteredData);
+
+        // Print
+        window.print();
+
+        // Restore pagination state
+        itemsPerPage = currentItemsPerPage;
+        currentPage = currentPageState;
+        updateTable(filteredData);
+    });
+}
+
+// Initialize functionalities including the print button
+document.addEventListener('DOMContentLoaded', () => {
+    loadCSV();
+    setupPrintButton(); // Call setupPrintButton to initialize the button
+});
