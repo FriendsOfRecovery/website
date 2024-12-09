@@ -3,6 +3,7 @@ import { initializeBioModal } from './js/bio-modal.js';
 import { initializeSlideshow } from './js/slideshow.js';
 import { initializeFloatingButton } from './js/floating-button.js';
 import { initializeOutreachScroll } from './js/outreach-scroll.js';
+import './js/table.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeHeaderFooter();

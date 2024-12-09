@@ -136,7 +136,7 @@ function showHouseDetails(entry) {
     const imageName = entry.Name.toLowerCase().replace(/ /g, '_');
     houseImage.src = `assets/houses/${imageName}.jpg`;
     houseImage.onerror = () => {
-        houseImage.src = 'assets/houses/default-house.jpg'; // Fallback image
+        houseImage.src = 'assets/houses/coming-soon.jpg'; // Use coming soon image as fallback
     };
 
     houseDetails.innerHTML = Object.entries(entry)
@@ -195,7 +195,8 @@ function populateFilterOptions(data) {
 }
 
 function getUniqueSortedOptions(data, category) {
-  const options = [...new Set(data.map((entry) => entry[category]))];
+  const options = [...new Set(data.map((entry) => entry[category]))]
+    .filter(option => option.trim() !== ''); // Exclude blank entries
   const nonNumericOptions = options.filter((item) => isNaN(item)).sort((a, b) => a.localeCompare(b));
   const numericOptions = options.filter((item) => !isNaN(item)).sort((a, b) => a - b);
   return [...nonNumericOptions, ...numericOptions];
@@ -249,3 +250,35 @@ document.head.appendChild(style);
 
 // Call loadCSV when the page loads
 document.addEventListener('DOMContentLoaded', loadCSV);
+
+function setupPrintButton() {
+    const printButton = document.getElementById('print-button');
+    if (!printButton) return;
+
+    printButton.addEventListener('click', () => {
+        // Get current filtered data
+        const filteredData = filterData(data);
+        
+        // Store current pagination state
+        const currentItemsPerPage = itemsPerPage;
+        const currentPageState = currentPage;
+        
+        // Show all filtered items
+        itemsPerPage = filteredData.length;
+        updateTable(filteredData);
+
+        // Print
+        window.print();
+
+        // Restore pagination state
+        itemsPerPage = currentItemsPerPage;
+        currentPage = currentPageState;
+        updateTable(filteredData);
+    });
+}
+
+// Initialize functionalities including the print button
+document.addEventListener('DOMContentLoaded', () => {
+    loadCSV();
+    setupPrintButton(); // Call setupPrintButton to initialize the button
+});
