@@ -132,10 +132,18 @@ function showHouseDetails(entry) {
     if (!entry) return; // Don't show popup if no entry is provided
 
     houseName.textContent = entry.Name;
-    // Replace spaces with underscores for the image filename
-    const imageName = entry.Name.toLowerCase().replace(/ /g, '_');
+    // Sanitize the house name to create a valid image filename
+    const imageName = entry.Name
+      .toLowerCase()
+      .replace(/[^\w\s]/gi, '') // Remove non-alphanumeric characters
+      .replace(/\s+/g, '_');    // Replace spaces with underscores
+
+    console.log(`Loading image for: ${entry.Name}`);
+    console.log(`Image path: assets/houses/${imageName}.jpg`);
+
     houseImage.src = `assets/houses/${imageName}.jpg`;
     houseImage.onerror = () => {
+        console.error(`Image not found: assets/houses/${imageName}.jpg`);
         houseImage.src = 'assets/houses/coming-soon.jpg'; // Use coming soon image as fallback
     };
 
