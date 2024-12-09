@@ -197,7 +197,7 @@
 }
 
 #house-image {
-    width: 100%;
+    width: auto;
     max-height: 300px;
     object-fit: cover;
     border-radius: 4px;
