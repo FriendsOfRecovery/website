@@ -13,7 +13,6 @@ async function loadCSV() {
     initializeTable(data);
   } catch (error) {
     console.error('Error loading CSV file:', error.message); // Only log the error message
-    alert('An error occurred while loading the data. Please try again later.'); // User-friendly message
   }
 }
 
@@ -248,8 +247,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Call loadCSV when the page loads
-document.addEventListener('DOMContentLoaded', loadCSV);
 
 function setupPrintButton() {
     const printButton = document.getElementById('print-button');
@@ -276,9 +273,8 @@ function setupPrintButton() {
         updateTable(filteredData);
     });
 }
-
-// Initialize functionalities including the print button
-document.addEventListener('DOMContentLoaded', () => {
+// Export an initialization function instead of auto-running
+export function initializePhoneList() {
     loadCSV();
-    setupPrintButton(); // Call setupPrintButton to initialize the button
-});
+    setupPrintButton();
+}
