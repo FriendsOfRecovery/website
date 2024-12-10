@@ -132,7 +132,7 @@ function showHouseDetails(entry) {
 
     houseName.textContent = entry.Name;
     // Replace spaces with underscores for the image filename
-    const imageName = entry.Name.toLowerCase().replace(/ /g, '_');
+    const imageName = entry.Name.replace(/ /g, '_');
     houseImage.src = `assets/houses/${imageName}.jpg`;
     houseImage.onerror = () => {
         houseImage.src = 'assets/houses/coming-soon.jpg'; // Use coming soon image as fallback
