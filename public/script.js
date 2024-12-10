@@ -11,9 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSlideshow();
     initializeFloatingButton();
     initializeOutreachScroll();
-    
-    // Only initialize phone list if we're on the correct page
-    if (document.querySelector('.oxford-phone')) {
-        initializePhoneList();
-    }
+    initializePhoneList();
 });

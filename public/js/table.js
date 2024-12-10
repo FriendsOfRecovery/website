@@ -273,8 +273,10 @@ function setupPrintButton() {
         updateTable(filteredData);
     });
 }
+
 // Export an initialization function instead of auto-running
 export function initializePhoneList() {
+    if (!document.querySelector('.oxford-phone')) return; // Guard clause
     loadCSV();
     setupPrintButton();
 }
