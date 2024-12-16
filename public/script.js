@@ -4,6 +4,7 @@ import { initializeSlideshow } from './js/slideshow.js';
 import { initializeFloatingButton } from './js/floating-button.js';
 import { initializeOutreachScroll } from './js/outreach-scroll.js';
 import { initializePhoneList } from './js/table.js';
+import { initializeHolidayPopup } from './js/holiday-popup.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeHeaderFooter();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeFloatingButton();
     initializeOutreachScroll();
     initializePhoneList();
+    initializeHolidayPopup();
 });
