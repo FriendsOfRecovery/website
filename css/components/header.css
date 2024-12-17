@@ -1,0 +1,92 @@
+/* Header Styling */
+header {
+    background: linear-gradient(90deg, #5F07B3, #008DBB);
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Mobile menu styles... */
+    /* (Keep existing mobile menu styles) */
+}
+
+/* Update header z-index and add semi-transparency */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    transition: right 0.3s ease;
+    z-index: 1000; /* Ensure menu is always on top */
+}
+
+.hamburger-menu {
+    /* ... existing styles ... */
+    z-index: 1001; /* Slightly higher than mobile-menu */
+}
+
+#main-header {
+    /* ... existing styles ... */
+    z-index: 999; /* High z-index but below mobile menu */
+} 
