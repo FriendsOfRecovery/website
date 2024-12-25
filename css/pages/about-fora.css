@@ -1,0 +1,351 @@
+/* FORA About Page Specific Styles */
+.fora-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fora-hero {
+    background: linear-gradient(90deg, #5F07B3, #008DBB);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.fora-hero h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.mission-section {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.mission-section h2 {
+    color: #5F07B3;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.value-card i {
+    font-size: 2.5em;
+    color: #5F07B3;
+    margin-bottom: 15px;
+}
+
+/* Staff and Team Sections */
+.about-page {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-page__main {
+    min-height: 100%;
+}
+
+.about-page__sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+/* Outreach Section */
+.outreach-section {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.outreach-section h2 {
+    margin-bottom: 1.5rem;
+    color: #5F07B3;
+}
+
+.outreach-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.outreach-scroll {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.outreach-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Outreach Member Styles */
+.outreach-member {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-width: 300px;
+}
+
+.outreach-member:hover {
+    transform: translateY(-5px);
+}
+
+.outreach-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #5F07B3;
+    margin-bottom: 15px;
+}
+
+/* Outreach Navigation Buttons */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(95, 7, 179, 0.8);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-btn:hover {
+    background: rgba(95, 7, 179, 1);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+    
+    .fora-hero {
+        padding: 40px 20px;
+    }
+    
+    .mission-section {
+        padding: 25px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .outreach-container {
+        padding: 0;
+    }
+    
+    .outreach-scroll {
+        overflow-x: auto;
+        padding: 20px;
+    }
+}
+
+/* Staff and Bio Styles */
+.staff-member {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+}
+
+.staff-image {
+    width: 100%;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Chairman Section */
+.chairman-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.chairman-section img {
+    margin-bottom: 15px;
+    max-width: 200px;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+}
+
+/* Added new styles for modal image */
+.modal-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #5F07B3;
+    border-radius: 50%;
+}
+
+/* Added for better text layout */
+.bio-text {
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Hide bio content on main page */
+.bio-content {
+    display: none;
+}
+
+.bio-content p {
+    margin-bottom: 1em; /* Add space between paragraphs */
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0; /* Remove margin from last paragraph */
+}
+
+/* Update modal text styles */
+.modal-bio-text p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.modal-bio-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Staff section adjustments */
+.staff-section {
+    margin-top: 2rem;
+}
+
+.staff-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+/* Make bio content scrollable if too long */
+.bio-content {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page__sidebar {
+        position: static;
+        max-height: none;
+        padding-right: 0;
+    }
+}
+
+/* Custom Scrollbar Styling */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Custom scrollbar for the outreach-scroll container */
+.outreach-scroll::-webkit-scrollbar {
+    height: 8px;  /* Smaller height for horizontal scrollbar */
+}
+
+.outreach-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.outreach-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    border: 2px solid #f1f1f1;
+}
